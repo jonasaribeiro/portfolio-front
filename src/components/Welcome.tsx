@@ -1,18 +1,24 @@
+import {
+  Container,
+  StyledText,
+  StyledTextContainer,
+} from "@/styles/components/Welcome.styled";
 import { StyledSection } from "@/styles/components/utils.styled";
+import Typewriter from "./smallComponents/Typewriter";
 
 const WelcomeComponent = () => {
   return (
     <>
-      <StyledSection dark>
-        <div>
-          <div>
-            <h2>Hello World!</h2>
-            <p>Placeholde - Frase curta de apresentação</p>
-          </div>
+      <StyledSection $dark>
+        <Container>
+          <StyledTextContainer>
+            <Typewriter text="Hello World!" />
+            <StyledText>Placeholde - Frase curta de apresentação</StyledText>
+          </StyledTextContainer>
           <div>
             <h2>placeholder para imagens</h2>
           </div>
-        </div>
+        </Container>
       </StyledSection>
     </>
   );

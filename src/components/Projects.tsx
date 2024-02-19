@@ -8,7 +8,7 @@ import { StyledSection } from "@/styles/components/utils.styled";
 const ProjectsComponent = () => {
   return (
     <>
-      <StyledSection dark>
+      <StyledSection $dark>
         <h2>Projetos em destaque</h2>
         <ProjectList>
           <ProjectLI>

@@ -26,3 +26,14 @@ export const pulseGlow = keyframes`
         background-size: 100%;
     }
 `;
+
+export const typing = keyframes`
+  from { width: 0; }
+  to { width: 100%; }
+`;
+
+export const blinkCursor = keyframes`
+  0% { border-color: transparent; }
+  50% { border-color: white; }
+  100% { border-color: transparent; }
+`;

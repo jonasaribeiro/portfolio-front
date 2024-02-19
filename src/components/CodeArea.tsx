@@ -24,7 +24,7 @@ const projects = [
 const CodeAreaComponent = () => {
   return (
     <>
-      <StyledSection dark>
+      <StyledSection $dark>
         <Void>
           <Crop>
             <ProjectList>
@@ -32,7 +32,7 @@ const CodeAreaComponent = () => {
                 <ListItem
                   key={index}
                   $index={index}
-                  projectsCount={projects.length}
+                  $projectsCount={projects.length}
                 >
                   <Card>
                     <a href="">

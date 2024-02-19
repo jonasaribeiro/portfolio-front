@@ -26,7 +26,7 @@ export const ProjectList = styled.ul`
   }
 `;
 
-export const ListItem = styled.li<{ $index: number; projectsCount: number }>`
+export const ListItem = styled.li<{ $index: number; $projectsCount: number }>`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -35,8 +35,8 @@ export const ListItem = styled.li<{ $index: number; projectsCount: number }>`
 
   &,
   & > div {
-    animation-delay: ${({ $index, projectsCount }) =>
-      `calc((var(--rotate-speed) / ${projectsCount}) * -${$index}s)`};
+    animation-delay: ${({ $index, $projectsCount }) =>
+      `calc((var(--rotate-speed) / ${$projectsCount}) * -${$index}s)`};
   }
 `;
 
