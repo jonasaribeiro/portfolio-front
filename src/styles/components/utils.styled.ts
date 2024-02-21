@@ -8,4 +8,16 @@ export const StyledSection = styled.section<{ $dark?: boolean }>`
   background-color: ${({ $dark }) => ($dark ? "#040A2B" : "white")};
   color: ${({ $dark }) => ($dark ? "white" : "#040A2B")};
   overflow: hidden;
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
 `;

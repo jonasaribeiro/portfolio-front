@@ -2,6 +2,16 @@
 
 import styled from "styled-components";
 
+export const ProjectsPageContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+`;
+
 export const ProjectList = styled.ul`
   width: 100%;
   display: flex;
