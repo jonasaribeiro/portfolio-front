@@ -1,6 +1,7 @@
 import ContactPage from "@/components/ContactPage";
 import HeaderComponent from "@/components/Header";
 import StartPage from "@/components/StartPage";
+import TecDeckPage from "@/components/TecDeckPage";
 import { StyledMain } from "@/styles/components/Page.styled";
 
 const HomePage = () => {
@@ -13,6 +14,8 @@ const HomePage = () => {
         <StartPage />
         <div id="contact" />
         <ContactPage />
+        <div id="tecDeck" />
+        <TecDeckPage />
         <div id="projects" />
       </StyledMain>
     </>
