@@ -7,10 +7,13 @@ const HomePage = () => {
   setTimeout(() => true, 50000);
   return (
     <>
+      <div id="start" />
       <HeaderComponent />
       <StyledMain>
         <StartPage />
+        <div id="contact" />
         <ContactPage />
+        <div id="projects" />
       </StyledMain>
     </>
   );

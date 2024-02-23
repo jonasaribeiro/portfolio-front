@@ -14,7 +14,7 @@ import {
 
 const StartPage = () => {
   return (
-    <StartPageSection id="start">
+    <StartPageSection>
       <StartPageInfoContainer>
         <StyledVisualBar1 />
         <div>
