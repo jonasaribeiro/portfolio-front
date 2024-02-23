@@ -8,7 +8,7 @@ export const StyledTypewriter = styled.h1`
   overflow: hidden;
   font-size: 3rem;
   font-weight: bolder;
-  color: blue;
+  color: white;
   line-height: 1.2;
 `;
 
