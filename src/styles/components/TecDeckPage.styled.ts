@@ -7,8 +7,8 @@ export const TecDeckPageSection = styled(StyledSectionBase)`
   display: flex;
   flex-direction: column;
   gap: 50px;
-  padding-top: 100px;
-  padding-bottom: 80px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   position: relative;
 `;
 
@@ -45,7 +45,7 @@ export const TecDeckPageCard = styled.div`
   }
 
   &:hover :not(:first-child) {
-    width: 120px;
+    width: 150px;
     transition: 0.4 ease-out;
   }
 `;
@@ -64,11 +64,11 @@ export const TecDeckPageCardBar = styled.div`
   top: 70px;
   left: 20px;
   height: 5px;
-  width: 150px;
+  width: 100%;
 
   :first-child {
     background-color: #2e3033;
-    width: 100%;
+    width: 150px;
     height: 100%;
   }
 

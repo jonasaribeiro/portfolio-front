@@ -67,7 +67,7 @@ const ContactPage = () => {
           <h3>Deixe uma mensagem</h3>
           <form action="">
             <input type="text" name="" id="" placeholder="Assunto*" />
-            <input type="email" name="" id="" placeholder="Seu Email*" />
+            <input type="email" name="" id="" placeholder="Seu email*" />
             <textarea
               name=""
               id=""
