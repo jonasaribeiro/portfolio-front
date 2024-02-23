@@ -16,12 +16,14 @@ export const StyledSectionBase = styled.section`
   width: 100%;
   min-height: calc(100vh - 100px);
   padding: 0 40px;
+  border-top: #ffffff50 solid 1px;
 `;
 
 export const StyledVisualBar1 = styled.div`
   background: #d9d9d9;
   width: 200px;
   height: 10px;
+  align-self: baseline;
 `;
 
 export const StyledVisualBar2 = styled.div`

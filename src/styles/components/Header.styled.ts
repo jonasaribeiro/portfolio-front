@@ -9,7 +9,7 @@ export const StyledHeader = styled.header`
   background-color: #040a2b;
   position: sticky;
   top: 0;
-  border-bottom: #001fff26 solid 1px;
+  border-bottom: #ffffff50 solid 1px;
   color: white;
   padding: 0 40px;
   z-index: 1;
