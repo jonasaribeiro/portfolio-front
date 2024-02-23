@@ -24,6 +24,7 @@ export const ContactPageOutContainer = styled.div`
     background: #0008cc;
     border-style: none;
     font-size: 1.2rem;
+    cursor: pointer;
   }
 `;
 
