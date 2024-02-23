@@ -11,7 +11,6 @@ const HomePage = () => {
     <>
       <HeaderComponent />
       <StyledMain>
-        <StyledBookmark id="start" />
         <StartPage />
         <StyledBookmark id="contact" />
         <ContactPage />

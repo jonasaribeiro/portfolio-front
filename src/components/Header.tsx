@@ -12,7 +12,7 @@ const HeaderComponent = () => {
         <Typewriter text="</>Jonas Ribeiro" />
       </StyledHeaderContainer>
       <StyledHeaderContainer>
-        <a href="#start">Início</a>
+        <a href="#">Início</a>
         <a href="#contact">Contato</a>
         <a href="#projects">Projetos</a>
         <figure>
