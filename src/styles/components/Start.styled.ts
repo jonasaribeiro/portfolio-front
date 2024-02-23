@@ -2,12 +2,15 @@
 
 import styled from "styled-components";
 import { StyledSectionBase } from "./utils.styled";
+import { animStar } from "../animations";
 
 export const StartPageSection = styled(StyledSectionBase)`
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
+  overflow: hidden;
 `;
 
 export const StartPageInfoContainer = styled.div`
@@ -62,5 +65,27 @@ export const StartPageImageContainer = styled.div`
     height: 400px;
     width: 400px;
     border-radius: 100%;
+  }
+`;
+
+export const Star = styled.div<{
+  $size: number;
+  $shadows: string;
+  $duration: number;
+}>`
+  width: ${(props) => props.$size}px;
+  height: ${(props) => props.$size}px;
+  background: transparent;
+  box-shadow: ${(props) => props.$shadows};
+  animation: ${animStar} ${(props) => props.$duration}s linear infinite;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: ${(props) => props.$size}px;
+    height: ${(props) => props.$size}px;
+    background: transparent;
+    box-shadow: ${(props) => props.$shadows};
   }
 `;

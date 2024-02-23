@@ -11,10 +11,12 @@ import {
   StyledVisualBar1,
   StyledVisualBar2,
 } from "@/styles/components/utils.styled";
+import AnimatedBackground from "./smallComponents/AnimatedBackgroundStart";
 
 const StartPage = () => {
   return (
     <StartPageSection>
+      <AnimatedBackground />
       <StartPageInfoContainer>
         <StyledVisualBar1 />
         <div>

@@ -14,6 +14,7 @@ const HeaderComponent = () => {
       <StyledHeaderContainer>
         <a href="#">Início</a>
         <a href="#contact">Contato</a>
+        <a href="#tecDeck">Tecnologias</a>
         <a href="#projects">Projetos</a>
         <figure>
           <Image
