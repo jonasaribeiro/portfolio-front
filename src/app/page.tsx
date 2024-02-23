@@ -3,20 +3,21 @@ import HeaderComponent from "@/components/Header";
 import StartPage from "@/components/StartPage";
 import TecDeckPage from "@/components/TecDeckPage";
 import { StyledMain } from "@/styles/components/Page.styled";
+import { StyledBookmark } from "@/styles/components/utils.styled";
 
 const HomePage = () => {
   setTimeout(() => true, 50000);
   return (
     <>
-      <div id="start" />
       <HeaderComponent />
       <StyledMain>
+        <StyledBookmark id="start" />
         <StartPage />
-        <div id="contact" />
+        <StyledBookmark id="contact" />
         <ContactPage />
-        <div id="tecDeck" />
+        <StyledBookmark id="tecDeck" />
         <TecDeckPage />
-        <div id="projects" />
+        <StyledBookmark id="projects" />
       </StyledMain>
     </>
   );

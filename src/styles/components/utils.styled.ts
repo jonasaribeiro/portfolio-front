@@ -12,6 +12,11 @@ export const StyledTypewriter = styled.h1`
   line-height: 1.2;
 `;
 
+export const StyledBookmark = styled.div`
+  position: absolute;
+  margin-top: -100px;
+`;
+
 export const StyledSectionBase = styled.section`
   width: 100%;
   min-height: calc(100vh - 100px);
