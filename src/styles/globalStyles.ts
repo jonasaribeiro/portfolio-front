@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         border: 0;
         font-size: 100%;
-        font: inherit;
+        font: Inter;
         vertical-align: baseline;
         box-sizing: border-box;
     }
@@ -58,6 +58,11 @@ const GlobalStyle = createGlobalStyle`
         --count: 8;
         --easeInOutSine: cubic-bezier(0.37, 0, 0.63, 1);
         --easing: cubic-bezier(0.000, 0.37, 1.000, 0.63);
+    }
+
+    h2 {
+       font-size: 2.5rem;
+       color: white;
     }
 `;
 

@@ -11,7 +11,7 @@ export const StyledHeader = styled.header`
   top: 0;
   border-bottom: #001fff26 solid 1px;
   color: white;
-  padding: 0 20px;
+  padding: 0 40px;
   z-index: 1;
   height: 100px;
 `;

@@ -1,23 +1,17 @@
-import AboutMeComponent from "@/components/AboutMe";
-import CodeAreaComponent from "@/components/CodeArea";
+import ContactPage from "@/components/ContactPage";
 import HeaderComponent from "@/components/Header";
-import ProjectsComponent from "@/components/Projects";
-import TecListComponent from "@/components/TecList";
-import WelcomeComponent from "@/components/Welcome";
-import Image from "next/image";
+import StartPage from "@/components/StartPage";
+import { StyledMain } from "@/styles/components/Page.styled";
 
 const HomePage = () => {
   setTimeout(() => true, 50000);
   return (
     <>
       <HeaderComponent />
-      <main>
-        <WelcomeComponent />
-        <AboutMeComponent />
-        <ProjectsComponent />
-        <TecListComponent />
-        <CodeAreaComponent />
-      </main>
+      <StyledMain>
+        <StartPage />
+        <ContactPage />
+      </StyledMain>
     </>
   );
 };

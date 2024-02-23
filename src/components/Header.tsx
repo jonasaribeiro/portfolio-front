@@ -3,25 +3,25 @@ import {
   StyledHeaderContainer,
 } from "@/styles/components/Header.styled";
 import Image from "next/image";
+import Typewriter from "./smallComponents/Typewriter";
 
 const HeaderComponent = () => {
   return (
     <StyledHeader>
       <StyledHeaderContainer>
-        <div>X</div>
-        <Image
-          src="./imgs/logo-white.svg"
-          alt="{JAR}"
-          width={150}
-          height={50}
-        />
+        <Typewriter text="</>Jonas Ribeiro" />
       </StyledHeaderContainer>
       <StyledHeaderContainer>
-        <a href="#about-me">CONTATO</a>
+        <a href="#start">Início</a>
+        <a href="#contact">Contato</a>
+        <a href="#projects">Projetos</a>
         <figure>
-          <p>BR</p>
-          <p>|</p>
-          <p>EN</p>
+          <Image
+            src="/imgs/Flag_of_Brazil 1.svg"
+            alt="BR"
+            width={60}
+            height={40}
+          />
         </figure>
       </StyledHeaderContainer>
     </StyledHeader>

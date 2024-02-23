@@ -1,6 +1,6 @@
 "use client";
 
-import { StyledTypewriter } from "@/styles/components/Welcome.styled";
+import { StyledTypewriter } from "@/styles/components/utils.styled";
 import { useState, useEffect } from "react";
 
 const Typewriter = ({ text }: { text: string }) => {

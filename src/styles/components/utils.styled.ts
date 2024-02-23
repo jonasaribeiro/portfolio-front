@@ -2,22 +2,30 @@
 
 import styled from "styled-components";
 
-export const StyledSection = styled.section<{ $dark?: boolean }>`
-  height: calc(100vh - 100px);
-  width: 100%;
-  background-color: ${({ $dark }) => ($dark ? "#040A2B" : "white")};
-  color: ${({ $dark }) => ($dark ? "white" : "#040A2B")};
+export const StyledTypewriter = styled.h1`
+  display: inline-block;
+  white-space: nowrap;
   overflow: hidden;
+  font-size: 3rem;
+  font-weight: bolder;
+  color: blue;
+  line-height: 1.2;
+`;
 
-  h3 {
-    font-size: 2rem;
-  }
+export const StyledSectionBase = styled.section`
+  width: 100%;
+  min-height: calc(100vh - 100px);
+  padding: 0 40px;
+`;
 
-  h4 {
-    font-size: 1.5rem;
-  }
+export const StyledVisualBar1 = styled.div`
+  background: #d9d9d9;
+  width: 200px;
+  height: 10px;
+`;
 
-  p {
-    font-size: 1.1rem;
-  }
+export const StyledVisualBar2 = styled.div`
+  background: #d9d9d9;
+  width: 540px;
+  height: 1px;
 `;
