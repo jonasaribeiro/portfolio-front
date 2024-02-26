@@ -20,13 +20,17 @@ const StartPage = () => {
       <StartPageInfoContainer>
         <StyledVisualBar1 />
         <div>
-          <h2>Seja bem vindo ao meu portifólio,</h2>
-          <h2>Me chamo Jonas Afonso Ribeiro</h2>
+          <h2>
+            Seja bem vindo ao meu portifólio, <br /> Me chamo Jonas Afonso
+            Ribeiro
+          </h2>
         </div>
         <StartPageText1>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat ea
-          sed nihil fuga voluptatum? Iste, consectetur mollitia tempora culpa
-          aperiam odit a nam similique fugit odio distinctio sequi esse magni!
+          Sou um Desenvolvedor Full-Stack, dedicado a explorar profundamente os
+          fundamentos da programação em busca de melhorias constantes. Estou
+          comprometido com o aprendizado contínuo e estou sempre à procura de
+          oportunidades que me permitam demonstrar minhas habilidades e
+          enfrentar novos desafios!
         </StartPageText1>
         <StyledVisualBar2 />
         <StartPageExtraInfoContainer>
