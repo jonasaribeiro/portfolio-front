@@ -1,5 +1,3 @@
-"use client";
-
 import { StyledTypewriter } from "@/styles/components/utils.styled";
 import { useState, useEffect } from "react";
 

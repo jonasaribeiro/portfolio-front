@@ -76,8 +76,8 @@ const ContactPage = () => {
           </a>
         </ContactPageInfoContainer2>
         <ContactPageInfoContainer1>
-          <h4>Tel: +55 (32) 98488-1601</h4>
-          <h4>Email: jonasafribeiro@gmail.com</h4>
+          <p>Tel: +55 (32) 98488-1601</p>
+          <p>Email: jonasafribeiro@gmail.com</p>
         </ContactPageInfoContainer1>
       </ContactPageContainer>
     </ContactPageSection>

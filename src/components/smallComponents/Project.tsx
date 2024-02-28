@@ -32,7 +32,7 @@ const Project = ({
         <ImageContainer>
           <Image
             src={"/imgs/projects/" + imgs[currentImage]}
-            alt={name}
+            alt="Imagem do Projeto"
             width={300}
             height={150}
           />

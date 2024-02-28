@@ -1,5 +1,3 @@
-"use client";
-
 import styled from "styled-components";
 import { StyledSectionBase } from "./utils.styled";
 import { animStar } from "../animations";
@@ -29,8 +27,6 @@ export const StartPageExtraInfoContainer = styled.div`
     align-items: center;
     gap: 20px;
     width: 15rem;
-}
-    
   }
 `;
 

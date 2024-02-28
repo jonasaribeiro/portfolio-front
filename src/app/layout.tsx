@@ -1,9 +1,9 @@
-import StyledComponentsRegistry from "@/lib/registry";
 import { Metadata } from "next";
+import StyledComponentsRegistry from "@/lib/registry";
+import HeaderComponent from "@/components/Header";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Portifólio - Jonas A. Ribeiro",
     default: "Portifólio - Jonas A. Ribeiro",
     absolute: "Home | Portifólio - Jonas A. Ribeiro",
   },
@@ -15,7 +15,10 @@ const RootLayout = (props: React.PropsWithChildren) => {
   return (
     <html lang="PT-BR">
       <body>
-        <StyledComponentsRegistry>{props.children}</StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          <HeaderComponent />
+          {props.children}
+        </StyledComponentsRegistry>
       </body>
     </html>
   );

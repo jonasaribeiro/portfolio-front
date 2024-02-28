@@ -1,8 +1,6 @@
-"use client";
-
 import styled from "styled-components";
 
-export const StyledTypewriter = styled.h1`
+export const StyledTypewriter = styled.span`
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;

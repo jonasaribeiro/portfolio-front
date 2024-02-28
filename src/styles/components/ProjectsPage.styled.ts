@@ -1,8 +1,5 @@
-"use client";
-
 import styled from "styled-components";
 import { StyledSectionBase } from "./utils.styled";
-import Image from "next/image";
 
 export const ProjectPageSection = styled(StyledSectionBase)`
   display: flex;

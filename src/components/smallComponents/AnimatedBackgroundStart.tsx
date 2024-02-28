@@ -1,5 +1,3 @@
-"use client";
-
 import { Star } from "@/styles/components/Start.styled";
 import styled from "styled-components";
 
@@ -22,7 +20,7 @@ const Background = styled.div`
   right: 0;
   bottom: 0;
   overflow: hidden;
-  z-index: -1;
+  z-index: 0;
 `;
 
 const AnimatedBackground = () => (

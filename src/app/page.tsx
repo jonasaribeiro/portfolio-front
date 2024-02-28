@@ -1,24 +1,63 @@
-import ContactPage from "@/components/ContactPage";
-import HeaderComponent from "@/components/Header";
-import ProjectsPage from "@/components/ProjectsPage";
-import StartPage from "@/components/StartPage";
-import TecDeckPage from "@/components/TecDeckPage";
+"use client";
+
+import { useLazyLoad } from "@/hooks/useLazyLoad";
 import { StyledMain } from "@/styles/components/Page.styled";
-import { StyledBookmark } from "@/styles/components/utils.styled";
+import {
+  StyledBookmark,
+  StyledSectionBase,
+  StyledVisualBar1,
+} from "@/styles/components/utils.styled";
+import { Suspense, lazy, useRef } from "react";
+
+const StartPage = lazy(() => import("../components/StartPage"));
+const ContactPage = lazy(() => import("../components/ContactPage"));
+const TecDeckPage = lazy(() => import("../components/TecDeckPage"));
+const ProjectsPage = lazy(() => import("../components/ProjectsPage"));
+
+const LoadingPlaceholder = () => (
+  <StyledSectionBase>
+    <StyledVisualBar1 />
+    Carregando...
+  </StyledSectionBase>
+);
 
 const HomePage = () => {
-  setTimeout(() => true, 50000);
+  const [isStartPageVisible, startPageRef] = useLazyLoad();
+  const [isContactPageVisible, contactPageRef] = useLazyLoad();
+  const [isTecDeckPageVisible, tecDeckPageRef] = useLazyLoad();
+  const [isProjectsPageVisible, projectsPageRef] = useLazyLoad();
+
   return (
     <>
-      <HeaderComponent />
       <StyledMain>
-        <StartPage />
+        <div ref={startPageRef}>
+          <Suspense fallback={<LoadingPlaceholder />}>
+            {isStartPageVisible && <StartPage />}
+          </Suspense>
+        </div>
         <StyledBookmark id="contact" />
-        <ContactPage />
+
+        <div ref={contactPageRef}>
+          <Suspense fallback={<LoadingPlaceholder />}>
+            {isContactPageVisible && <ContactPage />}
+          </Suspense>
+        </div>
+
         <StyledBookmark id="tecDeck" />
-        <TecDeckPage />
+
+        <div ref={tecDeckPageRef}>
+          <Suspense fallback={<LoadingPlaceholder />}>
+            {isTecDeckPageVisible && <TecDeckPage />}
+          </Suspense>
+        </div>
+
         <StyledBookmark id="projects" />
-        <ProjectsPage />
+
+        <div ref={projectsPageRef}>
+          <Suspense fallback={<LoadingPlaceholder />}>
+            {isProjectsPageVisible && <ProjectsPage />}
+          </Suspense>
+        </div>
       </StyledMain>
     </>
   );
