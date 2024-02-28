@@ -33,8 +33,8 @@ const Project = ({
           <Image
             src={"/imgs/projects/" + imgs[currentImage]}
             alt="Imagem do Projeto"
-            width={300}
-            height={150}
+            width={800}
+            height={400}
           />
           <div>
             <ProjectName>{name}</ProjectName>

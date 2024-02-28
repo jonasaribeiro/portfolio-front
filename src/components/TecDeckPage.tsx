@@ -12,15 +12,19 @@ import Image from "next/image";
 const tecArray = [
   { name: "javascript", img: "javascript.svg" },
   { name: "typescript", img: "typescript.svg" },
-  { name: "typeorm", img: "typeorm.svg" },
-  { name: "stripe", img: "stripe.svg" },
-  { name: "sqlite", img: "sqlite.svg" },
-  { name: "react", img: "react.svg" },
   { name: "python", img: "python.svg" },
+  { name: "node.js", img: "nodejs.svg" },
+  { name: "sqlite", img: "sqlite.svg" },
   { name: "postgresql", img: "postgresql.svg" },
-  { name: "JWT", img: "json-web-tokens.svg" },
+  { name: "typeorm", img: "typeorm.svg" },
+  { name: "prisma", img: "prisma.svg" },
+  { name: "react", img: "react.svg" },
+  { name: "next.js", img: "next-js.svg" },
+  { name: "styled-components", img: "styled-components.svg" },
   { name: "expressjs", img: "expressjs.svg" },
   { name: "django", img: "django.svg" },
+  { name: "stripe", img: "stripe.svg" },
+  { name: "JWT", img: "json-web-tokens.svg" },
 ];
 
 const TecDeckPage = () => {

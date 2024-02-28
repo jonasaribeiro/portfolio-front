@@ -11,24 +11,38 @@ export const ProjectPageSection = styled(StyledSectionBase)`
   ul {
     display: flex;
     gap: 30px;
-    flex-wrap: nowrap;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
   }
 
   li {
+    width: 100%;
+    min-width: 200px;
+    max-width: 500px;
+    height: 100%;
+    aspect-ratio: 2 / 1;
     overflow: hidden;
     border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000;
+
+    a {
+      height: 100%;
+      width: 100%;
+    }
   }
 `;
 
 export const ImageContainer = styled.div`
-  height: 150px;
+  height: 100%;
+  width: 101%;
   overflow: hidden;
   position: relative;
 
   & > img {
     height: 100%;
+    width: 100%;
     transition: transform 0.5 ease, box-shadow 0.5s ease;
   }
 

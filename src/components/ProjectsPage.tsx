@@ -1,9 +1,13 @@
 import { ProjectPageSection } from "@/styles/components/ProjectsPage.styled";
 import { StyledVisualBar1 } from "@/styles/components/utils.styled";
 import Project from "./smallComponents/Project";
-import { link } from "fs";
 
 const projects = [
+  {
+    name: "Portifólio",
+    link: "https://jonasribeiro.dev",
+    imgs: ["portifolio01.png", "portifolio02.png"],
+  },
   {
     name: "Nu Kenzie",
     link: "https://react-entrega-s1-template-nu-kenzie-jonasafribeiro.vercel.app",
