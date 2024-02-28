@@ -1,0 +1,38 @@
+"use client";
+
+import {
+  ImageContainer,
+  ProjectName,
+} from "@/styles/components/ProjectsPage.styled";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+
+const Project = ({ name, imgs }: { name: string; imgs: string[] }) => {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((currentImage) => (currentImage + 1) % imgs.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [imgs.length]);
+
+  return (
+    <li>
+      <ImageContainer>
+        <Image
+          src={"/imgs/projects/" + imgs[currentImage]}
+          alt={name}
+          width={300}
+          height={150}
+        />
+        <div>
+          <ProjectName>{name}</ProjectName>
+        </div>
+      </ImageContainer>
+    </li>
+  );
+};
+
+export default Project;
