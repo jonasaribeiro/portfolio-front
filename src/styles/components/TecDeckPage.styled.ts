@@ -31,6 +31,11 @@ export const TecDeckPageCard = styled.div`
   left: 0px;
   margin-left: -50px;
 
+  a {
+    height: 100%;
+    width: 100%;
+  }
+
   &:hover {
     transform: translateY(-20px);
     transition: 0.4s ease-out;
