@@ -7,7 +7,15 @@ import {
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const Project = ({ name, imgs }: { name: string; imgs: string[] }) => {
+const Project = ({
+  name,
+  imgs,
+  link,
+}: {
+  name: string;
+  imgs: string[];
+  link: string;
+}) => {
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
@@ -20,17 +28,19 @@ const Project = ({ name, imgs }: { name: string; imgs: string[] }) => {
 
   return (
     <li>
-      <ImageContainer>
-        <Image
-          src={"/imgs/projects/" + imgs[currentImage]}
-          alt={name}
-          width={300}
-          height={150}
-        />
-        <div>
-          <ProjectName>{name}</ProjectName>
-        </div>
-      </ImageContainer>
+      <a href={link} target="_blank">
+        <ImageContainer>
+          <Image
+            src={"/imgs/projects/" + imgs[currentImage]}
+            alt={name}
+            width={300}
+            height={150}
+          />
+          <div>
+            <ProjectName>{name}</ProjectName>
+          </div>
+        </ImageContainer>
+      </a>
     </li>
   );
 };

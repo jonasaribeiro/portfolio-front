@@ -28,9 +28,12 @@ const ProjectsPage = () => {
         <h2>Projetos</h2>
         <ul>
           {projects.map((element, index) => (
-            <a key={index} href={element.link} target="_blank">
-              <Project name={element.name} imgs={element.imgs} />
-            </a>
+            <Project
+              key={index}
+              name={element.name}
+              imgs={element.imgs}
+              link={element.link}
+            />
           ))}
         </ul>
       </ProjectPageSection>

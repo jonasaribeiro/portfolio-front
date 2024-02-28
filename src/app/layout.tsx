@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const RootLayout = (props: React.PropsWithChildren) => {
   return (
-    <html>
+    <html lang="PT-BR">
       <body>
         <StyledComponentsRegistry>{props.children}</StyledComponentsRegistry>
       </body>
