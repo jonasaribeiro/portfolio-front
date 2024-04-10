@@ -3,6 +3,7 @@
 import {
   StyledHeader,
   StyledHeaderContainer,
+  StyledHeaderNavText,
 } from "@/styles/components/Header.styled";
 import Image from "next/image";
 import Typewriter from "./smallComponents/Typewriter";
@@ -14,10 +15,10 @@ const HeaderComponent = () => {
         <Typewriter text="</>Jonas Ribeiro" />
       </StyledHeaderContainer>
       <StyledHeaderContainer>
-        <a href="#">Início</a>
-        <a href="#contact">Contato</a>
-        <a href="#tecDeck">Tecnologias</a>
-        <a href="#projects">Projetos</a>
+        <StyledHeaderNavText href="#">Início</StyledHeaderNavText>
+        <StyledHeaderNavText href="#contact">Contato</StyledHeaderNavText>
+        <StyledHeaderNavText href="#tecDeck">Tecnologias</StyledHeaderNavText>
+        <StyledHeaderNavText href="#projects">Projetos</StyledHeaderNavText>
         <figure>
           <Image
             src="/imgs/Flag_of_Brazil 1.svg"

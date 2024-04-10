@@ -4,10 +4,13 @@ export const StyledTypewriter = styled.span`
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bolder;
   color: white;
   line-height: 1.2;
+  @media (min-width: 540px) {
+    font-size: 3rem;
+  }
 `;
 
 export const StyledBookmark = styled.div`
@@ -24,13 +27,22 @@ export const StyledSectionBase = styled.section`
 
 export const StyledVisualBar1 = styled.div`
   background: #d9d9d9;
-  width: 200px;
+  width: 100%;
   height: 10px;
-  align-self: baseline;
+
+  @media (min-width: 1024px) {
+    align-self: baseline;
+    width: 200px;
+  }
 `;
 
 export const StyledVisualBar2 = styled.div`
   background: #d9d9d9;
-  width: 540px;
+  width: 100%;
   height: 1px;
+
+  @media (min-width: 1024px) {
+    align-self: baseline;
+    width: 540px;
+  }
 `;

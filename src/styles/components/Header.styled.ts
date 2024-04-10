@@ -19,3 +19,11 @@ export const StyledHeaderContainer = styled.div`
   align-items: center;
   gap: 15px;
 `;
+
+export const StyledHeaderNavText = styled.a`
+  display: none;
+
+  @media (min-width: 850px) {
+    display: flex;
+  }
+`;

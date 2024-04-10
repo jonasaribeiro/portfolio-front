@@ -43,7 +43,6 @@ export const ImageContainer = styled.div`
   & > img {
     height: 100%;
     width: 100%;
-    transition: transform 0.5 ease, box-shadow 0.5s ease;
   }
 
   & > div {

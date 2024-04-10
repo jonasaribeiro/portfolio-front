@@ -17,12 +17,17 @@ export const TecDeckPageDeckContainer = styled.div`
   margin-bottom: auto;
   margin-left: 90px;
   flex-wrap: wrap;
+  justify-content: center;
+
+  @media (min-width: 1024px) {
+    justify-content: flex-start;
+  }
 `;
 
 export const TecDeckPageCard = styled.div`
   display: flex;
-  height: 280px;
-  width: 200px;
+  height: 245px;
+  width: 175px;
   background-color: #17141d;
   border-radius: 10px;
   box-shadow: -1rem 0 3rem #000;
@@ -48,8 +53,16 @@ export const TecDeckPageCard = styled.div`
   }
 
   &:hover :not(:first-child) {
-    width: 150px;
+    width: 130px;
     transition: 0.4 ease-out;
+  }
+
+  @media (min-width: 1024px) {
+    width: 200px;
+    height: 280px;
+    &:hover :not(:first-child) {
+      width: 150px;
+    }
   }
 `;
 
@@ -71,7 +84,7 @@ export const TecDeckPageCardBar = styled.div`
 
   :first-child {
     background-color: #2e3033;
-    width: 150px;
+    width: 130px;
     height: 100%;
   }
 
@@ -89,10 +102,23 @@ export const TecDeckPageCardBar = styled.div`
     );
     transition: 0.6s ease-out;
   }
+
+  @media (min-width: 1024px) {
+    :first-child {
+      width: 150px;
+    }
+  }
 `;
 
 export const TecDeckPageCardFigure = styled.figure`
   position: absolute;
   top: 110px;
-  left: calc(50% - 60px);
+  left: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
+  display: flex;
+
+  @media (min-width: 1024px) {
+    left: calc(50% - 60px);
+  }
 `;

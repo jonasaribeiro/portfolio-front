@@ -5,28 +5,48 @@ import { animStar } from "../animations";
 export const StartPageSection = styled(StyledSectionBase)`
   position: relative;
   display: flex;
+  gap: 30px;
+  flex-direction: column-reverse;
   justify-content: space-between;
   align-items: center;
   color: white;
   overflow: hidden;
+  padding: 30px 0;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    padding: 0 10px;
+  }
 `;
 
 export const StartPageInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 50px;
-  width: 60%;
+  width: 100%;
+  padding: 0 20px;
+  z-index: 2;
+
+  @media (min-width: 1024px) {
+    width: 60%;
+    padding: 0;
+  }
 `;
 
 export const StartPageExtraInfoContainer = styled.div`
   display: flex;
   gap: 50px;
+  align-self: center;
 
   & > div {
     display: flex;
     align-items: center;
     gap: 20px;
     width: 15rem;
+  }
+
+  @media (min-width: 1024px) {
+    align-self: baseline;
   }
 `;
 
@@ -52,7 +72,7 @@ export const StartPageText3 = styled.p`
 
 export const StartPageImageContainer = styled.div`
   display: flex;
-  width: 40%;
+  width: 100%;
   height: 100%;
   justify-content: center;
 
