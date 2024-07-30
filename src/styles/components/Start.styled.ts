@@ -15,6 +15,7 @@ export const StartPageSection = styled(StyledSectionBase)`
 
   @media (min-width: 1024px) {
     flex-direction: row;
+    justify-content: center;
     padding: 0 10px;
   }
 `;
@@ -81,6 +82,10 @@ export const StartPageImageContainer = styled.div`
     height: 400px;
     width: 400px;
     border-radius: 100%;
+  }
+
+  @media (min-width: 1024px) {
+    width: fit-content;
   }
 `;
 

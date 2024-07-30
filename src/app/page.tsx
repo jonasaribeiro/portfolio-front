@@ -1,5 +1,6 @@
 "use client";
 
+import Modal from "@/components/smallComponents/modal";
 import { useLazyLoad } from "@/hooks/useLazyLoad";
 import { StyledMain } from "@/styles/components/Page.styled";
 import {
@@ -7,7 +8,7 @@ import {
   StyledSectionBase,
   StyledVisualBar1,
 } from "@/styles/components/utils.styled";
-import { Suspense, lazy, useRef } from "react";
+import { Suspense, lazy, useRef, useState } from "react";
 
 const StartPage = lazy(() => import("../components/StartPage"));
 const ContactPage = lazy(() => import("../components/ContactPage"));
@@ -22,13 +23,18 @@ const LoadingPlaceholder = () => (
 );
 
 const HomePage = () => {
+  const [isModalVisible, setModalVisible] = useState(true);
+
   const [isStartPageVisible, startPageRef] = useLazyLoad();
   const [isContactPageVisible, contactPageRef] = useLazyLoad();
   const [isTecDeckPageVisible, tecDeckPageRef] = useLazyLoad();
   const [isProjectsPageVisible, projectsPageRef] = useLazyLoad();
 
+  const closeModal = () => setModalVisible(false);
+
   return (
     <>
+      <Modal isVisible={isModalVisible} onClose={closeModal} />
       <StyledMain>
         <div ref={startPageRef}>
           <Suspense fallback={<LoadingPlaceholder />}>

@@ -28,7 +28,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/components/Header.js",
-    "src/app/api/route.js"
+    "src/app/api/route.js",
+    "src/components/smallComponents/modal.tsx"
   ],
   "exclude": ["node_modules"]
 }
