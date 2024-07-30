@@ -22,7 +22,7 @@ const Modal = ({
         </p>
         <p>
           Se tiver algum conselho ou observação, ficarei muito feliz em receber
-          seu feedback. Basta clicar no link abaixo para me enviar um e-mail:
+          seu feedback. Basta enviar no seguinte email:
         </p>
         <p>
           <a href="mailto:jonasafribeiro@gmail.com">jonasafribeiro@gmail.com</a>
