@@ -1,0 +1,27 @@
+{
+  "logo": "Meu Logo",
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "work": "Trabalho",
+    "contact": "Contato"
+  },
+  "maininfo": {
+    "title": "Título",
+    "text": "Texto"
+  },
+  "button": {
+    "viewprojects": "Ver Projetos",
+    "contact": "Contato"
+  },
+  "extrainfo": {
+    "yearexp": {
+      "amount": "10",
+      "label": "Anos de experiência"
+    },
+    "onlineprojects": {
+      "amount": "15",
+      "label": "Projetos Online"
+    }
+  }
+}

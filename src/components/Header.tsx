@@ -1,35 +1,38 @@
-"use client";
+// components/Header.tsx
+import React from "react";
+import styles from "../styles/components/Header.module.css";
 
-import {
-  StyledHeader,
-  StyledHeaderContainer,
-  StyledHeaderNavText,
-} from "@/styles/components/Header.styled";
-import Image from "next/image";
-import Typewriter from "./smallComponents/Typewriter";
+const Header: React.FC = () => (
+  <header className={styles.header}>
+    <div className={styles.header__topbar}>
+      <div className={styles.header__logo}>Jonas Ribeiro</div>
+      <nav className={styles.header__nav}>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div className={styles.header__language}>
+        <a onClick={() => console.log("Not yet implemented")}>PT</a>
+        <a onClick={() => console.log("Not yet implemented")}>EN</a>
+      </div>
+    </div>
 
-const HeaderComponent = () => {
-  return (
-    <StyledHeader>
-      <StyledHeaderContainer>
-        <Typewriter text="</>Jonas Ribeiro" />
-      </StyledHeaderContainer>
-      <StyledHeaderContainer>
-        <StyledHeaderNavText href="#">Início</StyledHeaderNavText>
-        <StyledHeaderNavText href="#contact">Contato</StyledHeaderNavText>
-        <StyledHeaderNavText href="#tecDeck">Tecnologias</StyledHeaderNavText>
-        <StyledHeaderNavText href="#projects">Projetos</StyledHeaderNavText>
-        <figure>
-          <Image
-            src="/imgs/Flag_of_Brazil 1.svg"
-            alt="BR"
-            width={60}
-            height={40}
-          />
-        </figure>
-      </StyledHeaderContainer>
-    </StyledHeader>
-  );
-};
+    <div className={styles.header__hero}>
+      <h1 className={styles.header__title}>
+        Código inteligente,
+        <br /> impacto real
+      </h1>
+      <p className={styles.header__subtitle}>
+        Olá! Sou Jonas Ribeiro, transformo ideias em realidade digital. Explore
+        meus projetos e habilidades técnicas.
+      </p>
+      <div className={styles.header__cta}>
+        <button>Ver Projetos</button>
+        <button>Entrar em Contato</button>
+      </div>
+    </div>
+  </header>
+);
 
-export default HeaderComponent;
+export default Header;

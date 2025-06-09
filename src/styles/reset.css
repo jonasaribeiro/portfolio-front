@@ -1,0 +1,68 @@
+/* reset.css */
+
+/* Box-sizing universal */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset geral de margens e padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remover decorações padrões */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remover lista padrão */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Normalizar fontes e textos */
+html,
+body {
+  height: 100%;
+  font-family: sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Elementos de mídia e imagens */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Formularios e botões padronizados */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* Remover estilos de botão padrão */
+button {
+  cursor: pointer;
+}
+
+/* Reset em tabelas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

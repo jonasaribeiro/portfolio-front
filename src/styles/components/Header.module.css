@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Anta&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anta&family=Outfit:wght@100..900&display=swap");
+
+.header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: url("/images/header-bg.svg") center/cover no-repeat;
+  color: white;
+  font-family: "Outfit";
+}
+
+/* 1. Topbar */
+.header__topbar {
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5rem;
+  gap: auto;
+}
+
+.header__logo {
+  font-size: 32px;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  font-size: 18px;
+}
+
+.header__language {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 18px;
+}
+
+/* 2. Hero */
+.header__hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  padding: 0 1rem;
+  text-transform: uppercase;
+}
+
+.header__title {
+  font-size: 118px;
+  margin-bottom: 0.5rem;
+  font-family: "Anta";
+}
+
+.header__subtitle {
+  font-size: 28px;
+  max-width: 1000px;
+  margin-bottom: 1.5rem;
+}
+
+/* 3. Call to Action */
+.header__cta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.header__cta button {
+  padding: 11px 50px;
+  font-size: 1rem;
+  color: #fff;
+  border: #fff solid;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #ffffff05;
+}
+
+.header__cta button:first-of-type {
+  background-color: #055084;
+}
