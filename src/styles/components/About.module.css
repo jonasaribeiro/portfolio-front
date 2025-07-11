@@ -1,0 +1,230 @@
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* NOVA CLASSE: Para a seção de introdução "Sobre Mim" */
+.about__intro_section {
+  padding: 4rem 1.5rem;
+  background-color: #000D1E; /* Cor escura sólida */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__text_wrapper {
+  max-width: 800px;
+  text-align: center;
+}
+
+.about__text_wrapper h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-family: 'Anta', sans-serif;
+  margin-bottom: 1rem;
+}
+
+.about__text_wrapper p {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+/* NOVA CLASSE: Para a seção de Habilidades e Tecnologias */
+.about__skills_section {
+  padding: 4rem 0; /* Espaçamento vertical, sem padding lateral */
+  font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
+  background-color: rgba(0, 54, 82, 0.5); /* Cor azulada semi-transparente */
+  color: #fff;
+}
+
+/* --- Cabeçalho da Seção de Habilidades --- */
+.about__skills__header {
+  display: flex;
+  align-items: center;
+  margin: 0 auto 1.5rem auto;
+  padding: 0 1.5rem;
+  max-width: 1300px; /* Largura máxima para o conteúdo interno */
+  gap: 1.5rem;
+}
+
+.about__skills__header h3 {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-family: 'Anta', sans-serif;
+}
+
+.about__skills__navigation_wrapper {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.about__skills__navigation_button {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: rgba(0, 13, 30, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.about__skills__navigation_button:hover {
+  background-color: rgba(0, 13, 30, 0.8);
+}
+
+/* --- Carrossel de Habilidades (Grid) --- */
+.about__skills__carousel {
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  scrollbar-width: none;
+}
+.about__skills__carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.about__skills__list {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(2, auto);
+  gap: 1.5rem;
+  padding: 0 1.5rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.about__skills__card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 280px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.about__skills__card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.about__skills__card__icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #94a3b8;
+}
+
+.about__skills__card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #f1f5f9;
+}
+
+.about__skills__card p {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+/* --- Seção de Tecnologias (Logos) --- */
+.about__techs {
+  margin-top: 4rem;
+}
+
+.about__techs h3 {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-family: 'Anta', sans-serif;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #fff;
+}
+
+.about__techs__carousel {
+  width: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  padding: 0.5rem 0;
+}
+
+/* ATUALIZADO: Correção para o loop infinito */
+.about__techs__list {
+  display: flex;
+  width: max-content; 
+  animation: scroll 40s linear infinite;
+  will-change: transform;
+}
+
+.about__techs__list:hover {
+  animation-play-state: paused;
+}
+
+.about__techs__logo_wrapper {
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.about__techs__logo {
+  font-size: clamp(3rem, 6vw, 3.5rem);
+  color: #94a3b8;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.about__techs__logo_wrapper:hover .about__techs__logo {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* --- Media Queries --- */
+@media (min-width: 768px) {
+  .about__intro_section { padding: 4rem 3rem; }
+  .about__skills_section { padding: 4rem 0; }
+  .about__skills__header,
+  .about__skills__list {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .about__techs h3 {
+    text-align: left;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about__intro_section { padding: 5rem 5rem; }
+  .about__skills__header,
+  .about__skills__list {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .about__techs h3 {
+    padding: 0 5rem;
+  }
+}

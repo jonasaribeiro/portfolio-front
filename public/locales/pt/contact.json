@@ -1,0 +1,16 @@
+{
+  "title": "Entre em Contato",
+  "socials": {
+    "whatsapp": "WhatsApp",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "form": {
+    "firstName": "Nome",
+    "lastName": "Sobrenome",
+    "email": "Endereço de E-mail",
+    "phone": "Número de Telefone (Opcional)",
+    "message": "Mensagem",
+    "submit": "Enviar Agora"
+  }
+}

@@ -1,0 +1,110 @@
+/* src/styles/components/Projects.module.css */
+.projects {
+  padding: 4rem 1.5rem;
+  background-color: #020617;
+  display: flex; /* Adicionado para centralizar o conteúdo */
+  flex-direction: column; /* Adicionado para empilhar header e lista */
+  align-items: center; /* Adicionado para centralizar o conteúdo */
+}
+
+/* O header e a lista agora são filhos diretos, então controlamos sua largura */
+.projects__header, .projects__list {
+  width: 100%;
+  max-width: 1300px; /* Largura máxima do conteúdo */
+}
+
+.projects__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.projects__header h2 {
+  font-family: 'Anta', sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #fff;
+}
+
+.projects__navigation {
+  display: none;
+}
+
+/* A classe .projects__carousel foi completamente REMOVIDA */
+
+.projects__list {
+  display: grid;
+  /* Esta é a regra correta para uma grade responsiva */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Card de Projeto */
+.projectCard {
+  width: 100%;
+  background-color: #0f172a;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.projectCard__imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  transition: transform 0.4s ease;
+}
+
+.projectCard:hover .projectCard__imageWrapper {
+  transform: scale(1.05);
+}
+
+.projectCard__content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.projectCard__content h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.projectCard__content p {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.projectCard__links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+
+.projectCard__links a {
+  color: #38bdf8;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.projectCard__links a:hover {
+  color: #7dd3fc;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .projects { padding: 4rem 3rem; }
+}
+
+@media (min-width: 1200px) {
+  .projects { padding: 5rem 5rem; }
+}

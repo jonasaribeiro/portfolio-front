@@ -1,27 +1,19 @@
 {
-  "logo": "Meu Logo",
   "nav": {
-    "home": "Início",
-    "about": "Sobre",
-    "work": "Trabalho",
-    "contact": "Contato"
+    "home": "INÍCIO",
+    "about": "SOBRE",
+    "projects": "PROJETOS",
+    "contact": "CONTATO"
   },
-  "maininfo": {
-    "title": "Título",
-    "text": "Texto"
-  },
-  "button": {
-    "viewprojects": "Ver Projetos",
-    "contact": "Contato"
-  },
-  "extrainfo": {
-    "yearexp": {
-      "amount": "10",
-      "label": "Anos de experiência"
+  "hero": {
+    "title": {
+      "line1": "CRIANDO CÓDIGO ESCALÁVEL",
+      "line2": "& EFICIENTE"
     },
-    "onlineprojects": {
-      "amount": "15",
-      "label": "Projetos Online"
+    "subtitle": "Sou Jonas Ribeiro, um desenvolvedor apaixonado e especialista em tecnologias web modernas. Explore meu trabalho, habilidades e projetos.",
+    "cta": {
+      "viewProjects": "Ver Projetos",
+      "contactMe": "Entrar em Contato"
     }
   }
 }

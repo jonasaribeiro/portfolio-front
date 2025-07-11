@@ -1,0 +1,34 @@
+{
+  "title": "Meus Projetos",
+  "links": {
+    "github": "GitHub",
+    "liveDemo": "Live Demo",
+    "caseStudy": "Estudo de Caso"
+  },
+  "projects": {
+    "p1": {
+      "title": "Projeto Criativo Visual",
+      "description": "Um design impactante para uma agência criativa, focado na experiência visual do usuário e em animações fluidas."
+    },
+    "p2": {
+      "title": "Plataforma de Negócios Online",
+      "description": "Solução completa para serviços de negócios, com agendamento integrado e painel de gerenciamento para clientes."
+    },
+    "p3": {
+      "title": "Portfólio Pessoal Dinâmico",
+      "description": "Desenvolvimento de um portfólio moderno para clientes, destacando suas jornadas e projetos de forma única."
+    },
+    "p4": {
+      "title": "Website para Restaurante",
+      "description": "Uma experiência gastronômica digital, com foco em um design que desperta o apetite e facilita as reservas."
+    },
+    "p5": {
+      "title": "Marca de Alta Gastronomia",
+      "description": "Interface elegante para um restaurante de alta gastronomia, combinando sofisticação com usabilidade impecável."
+    },
+    "p6": {
+      "title": "Design Extraordinário",
+      "description": "Um projeto que explora cores vibrantes e formas geométricas para criar uma identidade visual memorável e ousada."
+    }
+  }
+}

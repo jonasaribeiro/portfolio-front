@@ -1,0 +1,17 @@
+{
+  "aboutMe": {
+    "title": "About Me",
+    "description": "Full-Stack Developer passionate about turning challenges into efficient solutions. As a freelancer, I leverage my core skills in Python and JavaScript to build robust and scalable backend systems. I am driven by problem-solving, whether for corporate projects or creative everyday solutions. I am constantly seeking opportunities that allow me to grow and innovate."
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "categories": {
+      "progLanguages": "Programming Languages",
+      "devopsTools": "DevOps & Tools",
+      "cloudHosting": "Cloud & Hosting",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Databases"
+    }
+  }
+}

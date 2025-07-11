@@ -1,10 +1,13 @@
 import React from "react";
-import Header from "../components/Header";
+// Os caminhos agora apontam para a pasta 'components'
+import Header from "../components/Header"; 
 import About from "../components/About";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import { appWithTranslation, i18n } from "next-i18next";
+
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import type { GetStaticProps } from 'next';
 
 const Home = () => {
   return (
@@ -20,4 +23,16 @@ const Home = () => {
   );
 };
 
-export default appWithTranslation(Home);
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? 'pt', [
+      'common',
+      'header',
+      'about',
+      'projects',
+      'contact'
+    ])),
+  },
+});
+
+export default Home;

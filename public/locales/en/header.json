@@ -1,27 +1,19 @@
 {
-  "logo": "My Logo",
   "nav": {
-    "home": "Home",
-    "about": "About",
-    "work": "Work",
-    "contact": "Contact"
+    "home": "HOME",
+    "about": "ABOUT",
+    "projects": "PROJECTS",
+    "contact": "CONTACT"
   },
-  "maininfo": {
-    "title": "Título",
-    "text": "Texto"
-  },
-  "button": {
-    "viewprojects": "View Projects",
-    "contact": "Contact"
-  },
-  "extrainfo": {
-    "yearexp": {
-      "amount": "10",
-      "label": "Years of experience"
+  "hero": {
+    "title": {
+      "line1": "CRAFTING SCALABLE",
+      "line2": "& EFFICIENT CODE"
     },
-    "onlineprojects": {
-      "amount": "15",
-      "label": "Online Projects"
+    "subtitle": "I'm Jonas Ribeiro, a passionate developer specializing in modern web technologies. Explore my work, skills, and projects.",
+    "cta": {
+      "viewProjects": "View Projects",
+      "contactMe": "Contact Me"
     }
   }
 }

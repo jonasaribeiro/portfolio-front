@@ -1,0 +1,17 @@
+{
+  "aboutMe": {
+    "title": "Sobre Mim",
+    "description": "Desenvolvedor Full-Stack apaixonado por transformar desafios em soluções eficientes. Como freelancer, utilizo minhas principais habilidades em Python e JavaScript para construir sistemas de backend robustos e escaláveis. Minha motivação é resolver problemas, seja em projetos para empresas ou em soluções criativas para o dia a dia. Busco constantemente por oportunidades que me permitam crescer e inovar."
+  },
+  "skills": {
+    "title": "Habilidades & Tecnologias",
+    "categories": {
+      "progLanguages": "Linguagens de Programação",
+      "devopsTools": "DevOps & Ferramentas",
+      "cloudHosting": "Cloud & Hospedagem",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Bancos de Dados"
+    }
+  }
+}

@@ -1,38 +1,73 @@
-// components/Header.tsx
 import React from "react";
+import { useTranslation } from "next-i18next";
 import styles from "../styles/components/Header.module.css";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-const Header: React.FC = () => (
-  <header className={styles.header}>
-    <div className={styles.header__topbar}>
-      <div className={styles.header__logo}>Jonas Ribeiro</div>
-      <nav className={styles.header__nav}>
-        <a href="#inicio">Início</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#contato">Contato</a>
-      </nav>
-      <div className={styles.header__language}>
-        <a onClick={() => console.log("Not yet implemented")}>PT</a>
-        <a onClick={() => console.log("Not yet implemented")}>EN</a>
-      </div>
-    </div>
+// Dados para os links de navegação, facilitando a manutenção.
+const navLinks = [
+  { translationKey: "nav.home", href: "#home" },
+  { translationKey: "nav.about", href: "#about" },
+  { translationKey: "nav.projects", href: "#projects" },
+  { translationKey: "nav.contact", href: "#contact" },
+];
 
-    <div className={styles.header__hero}>
-      <h1 className={styles.header__title}>
-        Código inteligente,
-        <br /> impacto real
-      </h1>
-      <p className={styles.header__subtitle}>
-        Olá! Sou Jonas Ribeiro, transformo ideias em realidade digital. Explore
-        meus projetos e habilidades técnicas.
-      </p>
-      <div className={styles.header__cta}>
-        <button>Ver Projetos</button>
-        <button>Entrar em Contato</button>
+const Header: React.FC = () => {
+  // Hook para buscar as traduções do arquivo 'header.json'
+  const { t } = useTranslation("header");
+  
+  // Hook do Next.js para obter informações da rota atual, incluindo o idioma.
+  const router = useRouter();
+
+  return (
+    <header id="home" className={styles.header}>
+      <div className={styles.header__topbar}>
+        <div className={styles.header__logo}>Jonas Ribeiro</div>
+        
+        <nav className={styles.header__nav}>
+          {/* Mapeia o array de links para criar a navegação dinamicamente */}
+          {navLinks.map((link) => (
+            <Link href={link.href} key={link.href}>
+              {t(link.translationKey)}
+            </Link>
+          ))}
+        </nav>
+
+        <div className={styles.header__language}>
+          {/* Seletor de Idioma usando a abordagem correta com <Link> */}
+          {/* Isso resolve o problema do "clique duplo" */}
+          <Link href={router.asPath} locale="en" legacyBehavior>
+            <a className={router.locale === 'en' ? styles.active : ''}>
+              EN
+            </a>
+          </Link>
+          
+          <span>|</span>
+
+          <Link href={router.asPath} locale="pt" legacyBehavior>
+            <a className={router.locale === 'pt' ? styles.active : ''}>
+              PT
+            </a>
+          </Link>
+        </div>
       </div>
-    </div>
-  </header>
-);
+
+      <div className={styles.header__hero}>
+        <h1 className={styles.header__title}>
+          {t("hero.title.line1")}
+          <br />
+          {t("hero.title.line2")}
+        </h1>
+        <p className={styles.header__subtitle}>
+          {t("hero.subtitle")}
+        </p>
+        <div className={styles.header__cta}>
+          <Link href={"#projects"}>{t("hero.cta.viewProjects")}</Link>
+          <Link href={"#contact"}>{t("hero.cta.contactMe")}</Link>
+        </div>
+      </div>
+    </header>
+  );
+};
 
 export default Header;

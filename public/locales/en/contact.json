@@ -1,0 +1,16 @@
+{
+  "title": "Contact Me",
+  "socials": {
+    "whatsapp": "WhatsApp",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "form": {
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email Address",
+    "phone": "Phone Number (Optional)",
+    "message": "Message",
+    "submit": "Submit Now"
+  }
+}
