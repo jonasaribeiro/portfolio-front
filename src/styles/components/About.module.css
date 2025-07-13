@@ -7,10 +7,11 @@
   }
 }
 
-/* NOVA CLASSE: Para a seção de introdução "Sobre Mim" */
+/* --- ESTILOS BASE (MOBILE FIRST) --- */
+
 .about__intro_section {
-  padding: 4rem 1.5rem;
-  background-color: #000D1E; /* Cor escura sólida */
+  padding: 3rem 1.5rem;
+  background-color: #000D1E;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -23,88 +24,60 @@
 }
 
 .about__text_wrapper h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.8rem, 7vw, 2.5rem);
   font-family: 'Anta', sans-serif;
   margin-bottom: 1rem;
 }
 
 .about__text_wrapper p {
-  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  font-size: clamp(1rem, 4vw, 1.1rem);
   line-height: 1.6;
   color: #cbd5e1;
 }
 
-/* NOVA CLASSE: Para a seção de Habilidades e Tecnologias */
+/* ATUALIZADO: A seção principal agora tem overflow: hidden */
 .about__skills_section {
-  padding: 4rem 0; /* Espaçamento vertical, sem padding lateral */
+  padding: 3rem 0; /* Padding lateral removido, será controlado pelos filhos */
   font-family: 'Outfit', sans-serif;
-  overflow-x: hidden;
-  background-color: rgba(0, 54, 82, 0.5); /* Cor azulada semi-transparente */
+  background-color: rgba(0, 54, 82, 0.5);
   color: #fff;
+  overflow-x: hidden; /* Impede que o carrossel de logos vaze e crie scroll na página */
 }
 
 /* --- Cabeçalho da Seção de Habilidades --- */
 .about__skills__header {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
   margin: 0 auto 1.5rem auto;
-  padding: 0 1.5rem;
-  max-width: 1300px; /* Largura máxima para o conteúdo interno */
-  gap: 1.5rem;
+  padding: 0 1.5rem; /* Adiciona padding lateral */
+  max-width: 1300px;
 }
 
 .about__skills__header h3 {
-  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-size: clamp(1.5rem, 6vw, 2rem);
   font-family: 'Anta', sans-serif;
+  text-align: left;
 }
 
-.about__skills__navigation_wrapper {
-  display: flex;
-  gap: 1rem;
-  margin-left: auto;
-  flex-shrink: 0;
-}
-
-.about__skills__navigation_button {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  background-color: rgba(0, 13, 30, 0.5);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #fff;
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s;
-}
-
-.about__skills__navigation_button:hover {
-  background-color: rgba(0, 13, 30, 0.8);
-}
+/* ... (Estilos dos botões de navegação permanecem os mesmos) ... */
+.about__skills__navigation_wrapper { display: flex; gap: 1rem; }
+.about__skills__navigation_button { width: 2.5rem; height: 2.5rem; border-radius: 50%; background-color: rgba(0, 13, 30, 0.5); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.1); color: #fff; font-size: 1.5rem; cursor: pointer; display: flex; justify-content: center; align-items: center; transition: background-color 0.3s; }
+.about__skills__navigation_button:hover { background-color: rgba(0, 13, 30, 0.8); }
 
 /* --- Carrossel de Habilidades (Grid) --- */
 .about__skills__carousel {
-  overflow-x: auto;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-  scrollbar-width: none;
-}
-.about__skills__carousel::-webkit-scrollbar {
-  display: none;
+  /* Não precisa de overflow aqui, o pai já controla */
 }
 
 .about__skills__list {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-rows: repeat(2, auto);
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
-  padding: 0 1.5rem;
   max-width: 1300px;
   margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 .about__skills__card {
@@ -113,9 +86,9 @@
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   padding: 1.5rem;
-  width: 280px;
+  width: 100%;
   min-height: 180px;
   display: flex;
   flex-direction: column;
@@ -124,29 +97,11 @@
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.about__skills__card:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.about__skills__card__icon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #94a3b8;
-}
-
-.about__skills__card h4 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: #f1f5f9;
-}
-
-.about__skills__card p {
-  font-size: 0.9rem;
-  color: #cbd5e1;
-  line-height: 1.4;
-  flex-grow: 1;
-}
+/* ... (Estilos dos cards permanecem os mesmos) ... */
+.about__skills__card:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.1); }
+.about__skills__card__icon { font-size: 2rem; margin-bottom: 1rem; color: #94a3b8; }
+.about__skills__card h4 { font-size: 1.2rem; margin-bottom: 0.5rem; color: #f1f5f9; }
+.about__skills__card p { font-size: 0.9rem; color: #cbd5e1; line-height: 1.4; flex-grow: 1; }
 
 /* --- Seção de Tecnologias (Logos) --- */
 .about__techs {
@@ -154,7 +109,7 @@
 }
 
 .about__techs h3 {
-  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-size: clamp(1.5rem, 6vw, 2rem);
   font-family: 'Anta', sans-serif;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -163,13 +118,13 @@
 
 .about__techs__carousel {
   width: 100%;
-  overflow: hidden;
+  overflow: hidden; /* O overflow hidden aqui é para a máscara funcionar */
   -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   padding: 0.5rem 0;
 }
 
-/* ATUALIZADO: Correção para o loop infinito */
+/* ATUALIZADO: Lógica do carrossel de logos corrigida */
 .about__techs__list {
   display: flex;
   width: max-content; 
@@ -182,14 +137,14 @@
 }
 
 .about__techs__logo_wrapper {
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   display: flex;
   align-items: center;
   flex-shrink: 0;
 }
 
 .about__techs__logo {
-  font-size: clamp(3rem, 6vw, 3.5rem);
+  font-size: clamp(2.5rem, 8vw, 3rem);
   color: #94a3b8;
   transition: color 0.3s, transform 0.3s;
 }
@@ -199,15 +154,41 @@
   transform: scale(1.1);
 }
 
-/* --- Media Queries --- */
+/* --- Media Queries para Telas Maiores --- */
+
 @media (min-width: 768px) {
-  .about__intro_section { padding: 4rem 3rem; }
-  .about__skills_section { padding: 4rem 0; }
-  .about__skills__header,
-  .about__skills__list {
-    padding-left: 3rem;
-    padding-right: 3rem;
+  .about__intro_section {
+    padding: 4rem 3rem;
   }
+  .about__skills_section {
+    padding: 4rem 0;
+  }
+
+  .about__skills__header {
+    flex-direction: row;
+    align-items: center;
+    padding: 0 3rem;
+  }
+
+  .about__skills__navigation_wrapper {
+    margin-left: auto;
+  }
+
+  .about__skills__carousel {
+    overflow-x: auto;
+  }
+
+  .about__skills__list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, auto);
+    padding: 0 3rem;
+  }
+
+  .about__skills__card {
+    width: 280px;
+  }
+
   .about__techs h3 {
     text-align: left;
     max-width: 1300px;
@@ -215,10 +196,18 @@
     margin-right: auto;
     padding: 0 3rem;
   }
+  .about__techs__logo_wrapper {
+    padding: 0 2rem;
+  }
+  .about__techs__logo {
+    font-size: clamp(3rem, 6vw, 3.5rem);
+  }
 }
 
 @media (min-width: 1200px) {
-  .about__intro_section { padding: 5rem 5rem; }
+  .about__intro_section {
+    padding: 5rem 5rem;
+  }
   .about__skills__header,
   .about__skills__list {
     padding-left: 5rem;

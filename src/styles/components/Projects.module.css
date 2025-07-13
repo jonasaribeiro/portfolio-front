@@ -1,28 +1,28 @@
 /* src/styles/components/Projects.module.css */
 .projects {
-  padding: 4rem 1.5rem;
+  padding: 3rem 1.5rem; 
   background-color: #020617;
-  display: flex; /* Adicionado para centralizar o conteúdo */
-  flex-direction: column; /* Adicionado para empilhar header e lista */
-  align-items: center; /* Adicionado para centralizar o conteúdo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* O header e a lista agora são filhos diretos, então controlamos sua largura */
 .projects__header, .projects__list {
   width: 100%;
-  max-width: 1300px; /* Largura máxima do conteúdo */
+  max-width: 1300px;
 }
 
 .projects__header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .projects__header h2 {
   font-family: 'Anta', sans-serif;
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(2rem, 7vw, 2.5rem);
   color: #fff;
 }
 
@@ -30,12 +30,10 @@
   display: none;
 }
 
-/* A classe .projects__carousel foi completamente REMOVIDA */
-
 .projects__list {
   display: grid;
-  /* Esta é a regra correta para uma grade responsiva */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* A CORREÇÃO FINAL ESTÁ AQUI */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 2rem;
 }
 
@@ -100,11 +98,20 @@
   color: #7dd3fc;
 }
 
-/* Media Queries */
+/* --- Media Queries --- */
 @media (min-width: 768px) {
-  .projects { padding: 4rem 3rem; }
+  .projects { 
+    padding: 4rem 3rem; 
+  }
+
+  .projects__header {
+    justify-content: space-between;
+    text-align: left;
+  }
 }
 
 @media (min-width: 1200px) {
-  .projects { padding: 5rem 5rem; }
+  .projects { 
+    padding: 5rem 5rem; 
+  }
 }
