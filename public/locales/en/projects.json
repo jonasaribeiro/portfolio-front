@@ -1,34 +1,19 @@
 {
-  "title": "Our Projects",
+  "title": "My Projects",
   "links": {
     "github": "GitHub",
     "liveDemo": "Live Demo",
+    "live": "Live",
     "caseStudy": "Case Study"
   },
   "projects": {
     "p1": {
-      "title": "Creative Visual Designer",
-      "description": "An impactful design for a creative agency, focused on user visual experience and fluid animations."
+      "title": "Personal Portfolio",
+      "description": "Development of my professional portfolio to demonstrate my skills in full-stack development, responsive design, and internationalization (i18n) with Next.js."
     },
     "p2": {
-      "title": "Online Business Platform",
-      "description": "A complete solution for business services, with integrated scheduling and a client management dashboard."
-    },
-    "p3": {
-      "title": "Dynamic Personal Portfolio",
-      "description": "Development of a modern portfolio for clients, uniquely highlighting their journeys and projects."
-    },
-    "p4": {
-      "title": "Comfort Food Restaurant Website",
-      "description": "A digital dining experience, focusing on a design that whets the appetite and simplifies reservations."
-    },
-    "p5": {
-      "title": "Fine Dining Brand",
-      "description": "An elegant interface for a fine dining restaurant, combining sophistication with flawless usability."
-    },
-    "p6": {
-      "title": "Designing The Extraordinary",
-      "description": "A project that explores vibrant colors and geometric shapes to create a memorable and bold visual identity."
+      "title": "HandsPlay - Streaming Backend",
+      "description": "I was responsible for the architecture and development of the backend for a video streaming platform, designing a performant and scalable API to manage content and users."
     }
   }
 }
