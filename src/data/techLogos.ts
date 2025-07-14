@@ -1,4 +1,3 @@
-// src/data/techLogos.ts
 import {
   SiNextdotjs,
   SiReact,
@@ -13,7 +12,6 @@ import {
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 
-// Definimos um tipo para cada logo
 export interface TechLogo {
   id: string;
   name: string;

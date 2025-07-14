@@ -10,5 +10,4 @@ module.exports = {
   defaultNS: 'common',
   localePath: path.resolve("./public/locales"),
   react: { useSuspense: false },
-  // A linha reloadOnPrerender foi removida.
 };

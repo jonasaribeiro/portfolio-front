@@ -1,5 +1,3 @@
-// src/data/projects.ts
-
 export interface ProjectLink {
   labelKey: string;
   url: string;

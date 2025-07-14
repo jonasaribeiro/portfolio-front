@@ -7,7 +7,6 @@
   }
 }
 
-/* --- ESTILOS BASE (MOBILE FIRST) --- */
 
 .about__intro_section {
   padding: 3rem 1.5rem;
@@ -35,23 +34,21 @@
   color: #cbd5e1;
 }
 
-/* ATUALIZADO: A seção principal agora tem overflow: hidden */
 .about__skills_section {
-  padding: 3rem 0; /* Padding lateral removido, será controlado pelos filhos */
+  padding: 3rem 0;
   font-family: 'Outfit', sans-serif;
   background-color: rgba(0, 54, 82, 0.5);
   color: #fff;
-  overflow-x: hidden; /* Impede que o carrossel de logos vaze e crie scroll na página */
+  overflow-x: hidden;
 }
 
-/* --- Cabeçalho da Seção de Habilidades --- */
 .about__skills__header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
   margin: 0 auto 1.5rem auto;
-  padding: 0 1.5rem; /* Adiciona padding lateral */
+  padding: 0 1.5rem;
   max-width: 1300px;
 }
 
@@ -61,15 +58,9 @@
   text-align: left;
 }
 
-/* ... (Estilos dos botões de navegação permanecem os mesmos) ... */
 .about__skills__navigation_wrapper { display: flex; gap: 1rem; }
 .about__skills__navigation_button { width: 2.5rem; height: 2.5rem; border-radius: 50%; background-color: rgba(0, 13, 30, 0.5); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.1); color: #fff; font-size: 1.5rem; cursor: pointer; display: flex; justify-content: center; align-items: center; transition: background-color 0.3s; }
 .about__skills__navigation_button:hover { background-color: rgba(0, 13, 30, 0.8); }
-
-/* --- Carrossel de Habilidades (Grid) --- */
-.about__skills__carousel {
-  /* Não precisa de overflow aqui, o pai já controla */
-}
 
 .about__skills__list {
   display: flex;
@@ -97,13 +88,11 @@
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
-/* ... (Estilos dos cards permanecem os mesmos) ... */
 .about__skills__card:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.1); }
 .about__skills__card__icon { font-size: 2rem; margin-bottom: 1rem; color: #94a3b8; }
 .about__skills__card h4 { font-size: 1.2rem; margin-bottom: 0.5rem; color: #f1f5f9; }
 .about__skills__card p { font-size: 0.9rem; color: #cbd5e1; line-height: 1.4; flex-grow: 1; }
 
-/* --- Seção de Tecnologias (Logos) --- */
 .about__techs {
   margin-top: 4rem;
 }
@@ -118,13 +107,12 @@
 
 .about__techs__carousel {
   width: 100%;
-  overflow: hidden; /* O overflow hidden aqui é para a máscara funcionar */
+  overflow: hidden; 
   -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   padding: 0.5rem 0;
 }
 
-/* ATUALIZADO: Lógica do carrossel de logos corrigida */
 .about__techs__list {
   display: flex;
   width: max-content; 
@@ -153,8 +141,6 @@
   color: #ffffff;
   transform: scale(1.1);
 }
-
-/* --- Media Queries para Telas Maiores --- */
 
 @media (min-width: 768px) {
   .about__intro_section {

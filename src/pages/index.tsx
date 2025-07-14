@@ -1,5 +1,4 @@
 import React from "react";
-// Os caminhos agora apontam para a pasta 'components'
 import Header from "../components/Header"; 
 import About from "../components/About";
 import Projects from "../components/Projects";

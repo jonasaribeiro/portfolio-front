@@ -1,4 +1,3 @@
-// src/components/Contact.tsx
 import React, { useState } from "react";
 import { useTranslation } from "next-i18next";
 import { socialLinksData } from "../data/contact";
@@ -7,8 +6,6 @@ import Link from "next/link";
 
 const Contact: React.FC = () => {
   const { t } = useTranslation("contact");
-
-  // Estado para controlar os dados do formulário
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -17,16 +14,13 @@ const Contact: React.FC = () => {
     message: "",
   });
 
-  // Função para atualizar o estado quando o usuário digita
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Função para lidar com o envio do formulário
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Aqui você implementará a lógica de envio (ex: para uma API, EmailJS, etc.)
     console.log("Dados do formulário:", formData);
     alert("Mensagem enviada! (simulação)");
   };
@@ -34,8 +28,6 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" className={styles.contact}>
       <h2>{t("title")}</h2>
-
-      {/* Seção de Botões Sociais */}
       <div className={styles.contact__socials}>
         {socialLinksData.map((link) => {
           const Icon = link.icon;
@@ -47,8 +39,6 @@ const Contact: React.FC = () => {
           );
         })}
       </div>
-
-      {/* Formulário de Contato */}
       <form onSubmit={handleSubmit} className={styles.contact__form}>
         <div className={styles.contact__form_row}>
           <input

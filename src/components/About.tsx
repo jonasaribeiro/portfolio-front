@@ -19,17 +19,13 @@ const About: React.FC = () => {
   }, []);
 
   return (
-    // Usamos um Fragment <> para retornar duas seções irmãs
     <>
-      {/* SEÇÃO 1: SOBRE MIM - com seu próprio fundo e estrutura */}
       <section id="about" className={styles.about__intro_section}>
         <div className={styles.about__text_wrapper}>
           <h2>{t("aboutMe.title")}</h2>
           <p>{t("aboutMe.description")}</p>
         </div>
       </section>
-
-      {/* SEÇÃO 2: HABILIDADES E TECNOLOGIAS - com seu próprio fundo e estrutura */}
       <section className={styles.about__skills_section}>
         <div className={styles.about__skills__header}>
           <h3>{t("skills.title")}</h3>

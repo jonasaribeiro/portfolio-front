@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "../../styles/components/About.module.css"; // Usaremos o CSS do About
+import styles from "../../styles/components/About.module.css";
 
 interface SkillCardProps {
   title: string;
   technologies: string[];
-  icon: React.ElementType; // Recebe o componente do ícone como uma prop
+  icon: React.ElementType;
 }
 
 const SkillCard: React.FC<SkillCardProps> = ({ title, technologies, icon: IconComponent }) => {

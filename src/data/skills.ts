@@ -1,16 +1,13 @@
-// src/data/skills.ts
 import { FaCode, FaCloud, FaServer, FaDatabase, FaReact } from "react-icons/fa";
 import { IoBuild } from "react-icons/io5";
 
-// Atualize a interface Skill para aceitar um componente de ícone
 export interface Skill {
   id: string;
   translationKey: string;
   technologies: string[];
-  icon: React.ElementType; // Mudamos para ElementType
+  icon: React.ElementType;
 }
 
-// Adicione os ícones importados aos seus dados
 export const skillsData: Skill[] = [
   {
     id: "prog_languages",

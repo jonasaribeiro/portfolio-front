@@ -4,7 +4,6 @@ import styles from "../styles/components/Header.module.css";
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-// Dados para os links de navegação, facilitando a manutenção.
 const navLinks = [
   { translationKey: "nav.home", href: "#home" },
   { translationKey: "nav.about", href: "#about" },
@@ -13,10 +12,7 @@ const navLinks = [
 ];
 
 const Header: React.FC = () => {
-  // Hook para buscar as traduções do arquivo 'header.json'
   const { t } = useTranslation("header");
-  
-  // Hook do Next.js para obter informações da rota atual, incluindo o idioma.
   const router = useRouter();
 
   return (
@@ -25,7 +21,6 @@ const Header: React.FC = () => {
         <div className={styles.header__logo}>Jonas Ribeiro</div>
         
         <nav className={styles.header__nav}>
-          {/* Mapeia o array de links para criar a navegação dinamicamente */}
           {navLinks.map((link) => (
             <Link href={link.href} key={link.href}>
               {t(link.translationKey)}
@@ -34,8 +29,6 @@ const Header: React.FC = () => {
         </nav>
 
         <div className={styles.header__language}>
-          {/* Seletor de Idioma usando a abordagem correta com <Link> */}
-          {/* Isso resolve o problema do "clique duplo" */}
           <Link href={router.asPath} locale="en" legacyBehavior>
             <a className={router.locale === 'en' ? styles.active : ''}>
               EN

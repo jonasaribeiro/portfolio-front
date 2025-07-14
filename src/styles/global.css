@@ -1,14 +1,9 @@
-/*
-  Removemos 'height: 100vh' e 'width: 100vw' daqui.
-  Agora as seções terão a altura do seu conteúdo.
-*/
 section,
 header {
-  width: 100%; /* Ocupa a largura disponível, o que é mais seguro que 100vw */
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Justify-content foi removido para permitir que o conteúdo flua naturalmente */
 }
 
 body {

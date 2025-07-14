@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Anta&family=Outfit:wght@100..900&display=swap");
 
 .header {
-  /* ATUALIZADO: Usamos 100% em vez de 100vw para evitar problemas de overflow */
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -11,11 +10,9 @@
   color: white;
   font-family: "Outfit", sans-serif;
   overflow-x: hidden;
-  /* ATUALIZADO: Adicionamos um padding generoso para dar espaço e altura ao conteúdo */
   padding-bottom: 8rem;
 }
 
-/* 1. Topbar */
 .header__topbar {
   display: flex;
   width: 100%;
@@ -54,7 +51,6 @@
   color: #ffffff;
 }
 
-/* 2. Hero */
 .header__hero {
   flex: 1;
   display: flex;
@@ -63,7 +59,6 @@
   align-items: center;
   color: #fff;
   text-align: center;
-  /* Ajustamos o padding para o novo layout */
   padding: 4rem 1.5rem 0;
   text-transform: uppercase;
 }
@@ -84,7 +79,6 @@
   line-height: 1.5;
 }
 
-/* 3. Call to Action */
 .header__cta {
   display: flex;
   flex-direction: column;
@@ -116,8 +110,6 @@
   background-color: #055084;
   border-color: #055084;
 }
-
-/* --- Media Queries for Larger Screens --- */
 
 @media (min-width: 768px) {
   .header__topbar {
