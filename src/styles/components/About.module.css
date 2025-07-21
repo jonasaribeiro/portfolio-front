@@ -66,7 +66,7 @@
 
 .techs_container { margin-top: 4rem; width: 100%; }
 .techs_viewport { overflow: hidden; -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); }
-.techs_list { display: flex; width: max-content; animation: scroll 60s linear infinite; }
+.techs_list { padding: 5px 0; display: flex; width: max-content; animation: scroll 60s linear infinite; }
 .techs_list:hover { animation-play-state: paused; }
 .tech_logo_wrapper { display: flex; align-items: center; padding: 0 2rem; }
 .tech_logo { font-size: clamp(2.5rem, 8vw, 3rem); color: #94a3b8; transition: color 0.3s, transform 0.3s; }
