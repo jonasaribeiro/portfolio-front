@@ -1,5 +1,6 @@
 import { useTranslation } from "next-i18next";
-import React, { useCallback, useRef } from "react";
+import React, { useCallback, useMemo } from "react";
+import useEmblaCarousel from 'embla-carousel-react';
 
 import { skillsData, Skill } from "../data/skills";
 import { techLogosData, TechLogo } from "../data/techLogos";
@@ -9,13 +10,24 @@ import styles from "../styles/components/About.module.css";
 const About: React.FC = () => {
   const { t } = useTranslation("about");
   
-  const carouselRef = useRef<HTMLUListElement>(null);
+  const [skillsEmblaRef, skillsEmblaApi] = useEmblaCarousel({
+    align: 'start',
+  });
 
-  const handleScroll = useCallback((direction: 'prev' | 'next') => {
-    if (carouselRef.current) {
-      const scrollAmount = direction === 'prev' ? -300 : 300;
-      carouselRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  const handleSkillsPrev = useCallback(() => {
+    if (skillsEmblaApi) skillsEmblaApi.scrollPrev();
+  }, [skillsEmblaApi]);
+
+  const handleSkillsNext = useCallback(() => {
+    if (skillsEmblaApi) skillsEmblaApi.scrollNext();
+  }, [skillsEmblaApi]);
+
+  const skillPairs = useMemo(() => {
+    const pairs: Skill[][] = [];
+    for (let i = 0; i < skillsData.length; i += 2) {
+      pairs.push(skillsData.slice(i, i + 2));
     }
+    return pairs;
   }, []);
 
   return (
@@ -26,48 +38,40 @@ const About: React.FC = () => {
           <p>{t("aboutMe.description")}</p>
         </div>
       </section>
+
       <section className={styles.about__skills_section}>
         <div className={styles.about__skills__header}>
           <h3>{t("skills.title")}</h3>
           <div className={styles.about__skills__navigation_wrapper}>
-            <button
-              onClick={() => handleScroll('prev')}
-              className={styles.about__skills__navigation_button}
-              aria-label="Habilidade anterior"
-            >
-              &lt;
-            </button>
-            <button
-              onClick={() => handleScroll('next')}
-              className={styles.about__skills__navigation_button}
-              aria-label="Próxima habilidade"
-            >
-              &gt;
-            </button>
+            <button onClick={handleSkillsPrev} className={styles.about__skills__navigation_button} aria-label="Habilidade anterior">&lt;</button>
+            <button onClick={handleSkillsNext} className={styles.about__skills__navigation_button} aria-label="Próxima habilidade">&gt;</button>
           </div>
         </div>
-        
-        <div className={styles.about__skills__carousel}>
-          <ul className={styles.about__skills__list} ref={carouselRef}>
-            {skillsData.map((skill: Skill) => (
-              <SkillCard
-                key={skill.id}
-                title={t(skill.translationKey)}
-                technologies={skill.technologies}
-                icon={skill.icon}
-              />
+        <div className={styles.skills_carousel_viewport} ref={skillsEmblaRef}>
+          <div className={styles.skills_carousel_container}>
+            {skillPairs.map((pair, index) => (
+              <div className={styles.skills_carousel_slide} key={index}>
+                {pair.map((skill) => (
+                  <SkillCard
+                    key={skill.id}
+                    title={t(skill.translationKey)}
+                    technologies={skill.technologies}
+                    icon={skill.icon}
+                  />
+                ))}
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       
-        <div className={styles.about__techs}>
-          <div className={styles.about__techs__carousel}>
-            <div className={styles.about__techs__list}>
-              {[...techLogosData, ...techLogosData].map((logo: TechLogo, index) => {
+        <div className={styles.techs_container}>
+          <div className={styles.techs_viewport}>
+            <div className={styles.techs_list}>
+              {[...techLogosData, ...techLogosData].map((logo, index) => {
                 const IconComponent = logo.icon;
                 return (
-                  <div key={`${logo.id}-${index}`} className={styles.about__techs__logo_wrapper} title={logo.name}>
-                    <IconComponent className={styles.about__techs__logo} />
+                  <div key={`${logo.id}-${index}`} className={styles.tech_logo_wrapper} title={logo.name}>
+                    <IconComponent className={styles.tech_logo} />
                   </div>
                 );
               })}

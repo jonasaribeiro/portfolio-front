@@ -6,12 +6,16 @@
   "skills": {
     "title": "Habilidades & Tecnologias",
     "categories": {
-      "progLanguages": "Linguagens de Programação",
-      "devopsTools": "DevOps & Ferramentas",
-      "cloudHosting": "Cloud & Hospedagem",
+      "languages": "Linguagens",
       "frontend": "Frontend",
       "backend": "Backend",
-      "databases": "Bancos de Dados"
+      "databases_orms": "Bancos de Dados & ORMs",
+      "testing": "Testes",
+      "cloud": "Cloud",
+      "devops_infra": "DevOps & Infraestrutura",
+      "version_control": "Controle de Versão",
+      "apis_services": "APIs & Serviços",
+      "game_dev": "Desenvolvimento de Jogos"
     }
   }
 }
