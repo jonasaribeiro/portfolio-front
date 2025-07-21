@@ -1,0 +1,22 @@
+{
+  "title": "Jornada Acadêmica",
+  "categories": {
+    "graduation": "Graduação",
+    "courses": "Cursos & Certificações"
+  },
+  "items": {
+    "graduation_list": [
+      "Análise e Desenvolvimento de Sistemas - UNIFACVEST"
+    ],
+    "courses_list": [
+      "Machine Learning: classificação com SKLearn - Alura",
+      "React: escrevendo com Typescript - Alura",
+      "Arquitetura de computadores: por trás de como seu programa funciona - Alura",
+      "HTML5 e CSS3 parte 1: crie uma página da Web - Alura",
+      "Lógica de programação: comece em lógica com o jogo Pong e JavaScript - Alura",
+      "Lógica de programação: laços e listas com JavaScript - Alura",
+      "Analista de Suporte Técnico - NETWARE Barbacena",
+      "Informática Empresarial - NETWARE Barbacena"
+    ]
+  }
+}

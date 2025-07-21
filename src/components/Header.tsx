@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 const navLinks = [
   { translationKey: "nav.home", href: "#home" },
   { translationKey: "nav.about", href: "#about" },
+  { translationKey: "nav.academic", href: "#academic"},
   { translationKey: "nav.projects", href: "#projects" },
   { translationKey: "nav.contact", href: "#contact" },
 ];

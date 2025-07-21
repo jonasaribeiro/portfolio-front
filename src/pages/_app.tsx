@@ -11,7 +11,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
   useEffect(() => {
     const handleRouteChange = (locale: string) => {
-      i18n.reloadResources([locale], ['common', 'header', 'about', 'projects', 'contact']);
+      i18n.reloadResources([locale], ['common', 'header', 'about', 'academic', 'projects', 'contact']);
     };
 
     if (router.locale) {

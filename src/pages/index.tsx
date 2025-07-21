@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import type { GetStaticProps } from 'next';
+import Academic from "../components/Academic";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Header />
       <main>
         <About />
+        <Academic />
         <Projects />
         <Contact />
       </main>
@@ -28,6 +30,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => ({
       'common',
       'header',
       'about',
+      'academic',
       'projects',
       'contact'
     ])),

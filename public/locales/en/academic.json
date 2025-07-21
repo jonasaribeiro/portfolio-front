@@ -1,0 +1,22 @@
+{
+  "title": "Academic Journey",
+  "categories": {
+    "graduation": "Graduation",
+    "courses": "Courses & Certifications"
+  },
+  "items": {
+    "graduation_list": [
+      "Analysis and Systems Development - UNIFACVEST"
+    ],
+    "courses_list": [
+      "Machine Learning: Classification with SKLearn - Alura",
+      "React: Writing with Typescript - Alura",
+      "Computer Architecture: Behind How Your Program Works - Alura",
+      "HTML5 and CSS3 Part 1: Create a Web Page - Alura",
+      "Programming Logic: Get Started in Logic with the Pong Game and JavaScript - Alura",
+      "Programming Logic: Loops and Lists with JavaScript - Alura",
+      "Technical Support Analyst - NETWARE Barbacena",
+      "Business Informatics - NETWARE Barbacena"
+    ]
+  }
+}
