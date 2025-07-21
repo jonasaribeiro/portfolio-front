@@ -7,7 +7,11 @@ interface SkillCardProps {
   icon: React.ElementType;
 }
 
-const SkillCard: React.FC<SkillCardProps> = ({ title, technologies, icon: IconComponent }) => {
+const SkillCard: React.FC<SkillCardProps> = ({
+  title,
+  technologies,
+  icon: IconComponent,
+}) => {
   return (
     <li className={styles.about__skills__card}>
       <div className={styles.about__skills__card__icon}>

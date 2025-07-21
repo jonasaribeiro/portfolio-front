@@ -20,9 +20,9 @@ const Projects: React.FC = () => {
               image={project.image}
               title={t(project.titleKey)}
               description={t(project.descriptionKey)}
-              links={project.links.map(link => ({
+              links={project.links.map((link) => ({
                 ...link,
-                labelKey: t(link.labelKey)
+                labelKey: t(link.labelKey),
               }))}
             />
           ))}

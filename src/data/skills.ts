@@ -1,4 +1,12 @@
-import { FaCode, FaReact, FaServer, FaDatabase, FaCloud, FaCogs, FaGamepad } from "react-icons/fa";
+import {
+  FaCode,
+  FaReact,
+  FaServer,
+  FaDatabase,
+  FaCloud,
+  FaCogs,
+  FaGamepad,
+} from "react-icons/fa";
 import { SiJest, SiStripe, SiGithub } from "react-icons/si";
 
 export interface Skill {

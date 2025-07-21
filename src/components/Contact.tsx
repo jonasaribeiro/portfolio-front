@@ -14,7 +14,9 @@ const Contact: React.FC = () => {
     message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -32,7 +34,12 @@ const Contact: React.FC = () => {
         {socialLinksData.map((link) => {
           const Icon = link.icon;
           return (
-            <Link href={link.url} key={link.id} target="_blank" className={styles.contact__social_button}>
+            <Link
+              href={link.url}
+              key={link.id}
+              target="_blank"
+              className={styles.contact__social_button}
+            >
               <Icon />
               <span>{t(link.nameKey)}</span>
             </Link>

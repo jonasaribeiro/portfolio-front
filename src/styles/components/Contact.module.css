@@ -3,11 +3,11 @@
   flex-direction: column;
   align-items: center;
   padding: 4rem 1.5rem;
-  background-color: #0f172a; 
+  background-color: #0f172a;
 }
 
 .contact h2 {
-  font-family: 'Anta', sans-serif;
+  font-family: "Anta", sans-serif;
   font-size: clamp(2rem, 5vw, 3rem);
   color: #fff;
   text-transform: uppercase;
@@ -34,7 +34,9 @@
   border-radius: 8px;
   border: 1px solid #334155;
   font-weight: 500;
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 .contact__social_button:hover {
@@ -65,8 +67,10 @@
   border-radius: 8px;
   color: #fff;
   font-size: 1rem;
-  font-family: 'Outfit', sans-serif;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  font-family: "Outfit", sans-serif;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
 }
 
 .contact__form input:focus,

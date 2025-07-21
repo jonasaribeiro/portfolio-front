@@ -5,9 +5,7 @@
     "courses": "Cursos & Certificações"
   },
   "items": {
-    "graduation_list": [
-      "Análise e Desenvolvimento de Sistemas - UNIFACVEST"
-    ],
+    "graduation_list": ["Análise e Desenvolvimento de Sistemas - UNIFACVEST"],
     "courses_list": [
       "Machine Learning: classificação com SKLearn - Alura",
       "React: escrevendo com Typescript - Alura",

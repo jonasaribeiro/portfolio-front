@@ -11,16 +11,16 @@ interface ProjectCardProps {
   links: ProjectLink[];
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ image, title, description, links }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({
+  image,
+  title,
+  description,
+  links,
+}) => {
   return (
     <li className={styles.projectCard}>
       <div className={styles.projectCard__imageWrapper}>
-        <Image
-          src={image}
-          alt={title}
-          fill
-          style={{ objectFit: 'cover' }}
-        />
+        <Image src={image} alt={title} fill style={{ objectFit: "cover" }} />
       </div>
       <div className={styles.projectCard__content}>
         <h4>{title}</h4>
@@ -28,7 +28,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ image, title, description, li
         <div className={styles.projectCard__links}>
           {links.map((link) => (
             <Link href={link.url} key={link.url} target="_blank">
-              {link.labelKey} 
+              {link.labelKey}
             </Link>
           ))}
         </div>

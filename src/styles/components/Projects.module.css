@@ -1,12 +1,13 @@
 .projects {
-  padding: 3rem 1.5rem; 
+  padding: 3rem 1.5rem;
   background-color: #020617;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.projects__header, .projects__list {
+.projects__header,
+.projects__list {
   width: 100%;
   max-width: 1300px;
 }
@@ -20,7 +21,7 @@
 }
 
 .projects__header h2 {
-  font-family: 'Anta', sans-serif;
+  font-family: "Anta", sans-serif;
   font-size: clamp(2rem, 7vw, 2.5rem);
   color: #fff;
 }
@@ -96,8 +97,8 @@
 }
 
 @media (min-width: 768px) {
-  .projects { 
-    padding: 4rem 3rem; 
+  .projects {
+    padding: 4rem 3rem;
   }
 
   .projects__header {
@@ -107,7 +108,7 @@
 }
 
 @media (min-width: 1200px) {
-  .projects { 
-    padding: 5rem 5rem; 
+  .projects {
+    padding: 5rem 5rem;
   }
 }

@@ -8,7 +8,8 @@ export interface SocialLink {
 }
 
 const phoneNumber = "5532984881601";
-const whatsappMessage = "Olá! Vi seu portfólio e gostaria de entrar em contato.";
+const whatsappMessage =
+  "Olá! Vi seu portfólio e gostaria de entrar em contato.";
 const encodedMessage = encodeURIComponent(whatsappMessage);
 
 export const socialLinksData: SocialLink[] = [

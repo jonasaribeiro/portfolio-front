@@ -18,7 +18,10 @@ export const projectsData: Project[] = [
     descriptionKey: "projects.p1.description",
     image: "/images/projects/p1.png",
     links: [
-      { labelKey: "links.github", url: "https://github.com/jonasaribeiro/ongproject_backend" },
+      {
+        labelKey: "links.github",
+        url: "https://github.com/jonasaribeiro/ongproject_backend",
+      },
     ],
   },
   {
@@ -26,9 +29,7 @@ export const projectsData: Project[] = [
     titleKey: "projects.p2.title",
     descriptionKey: "projects.p2.description",
     image: "/images/projects/p2.png",
-    links: [
-      { labelKey: "links.live", url: "http://handsplay.com.br" },
-    ],
+    links: [{ labelKey: "links.live", url: "http://handsplay.com.br" }],
   },
   {
     id: "proj-03",
@@ -36,7 +37,10 @@ export const projectsData: Project[] = [
     descriptionKey: "projects.p3.description",
     image: "/images/projects/p3.png",
     links: [
-      { labelKey: "links.github", url: "https://github.com/jonasaribeiro/AuthFlowAPI" }
-    ]
+      {
+        labelKey: "links.github",
+        url: "https://github.com/jonasaribeiro/AuthFlowAPI",
+      },
+    ],
   },
 ];

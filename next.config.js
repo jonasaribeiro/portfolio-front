@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-const { i18n } = require('./next-i18next.config.js');
+const { i18n } = require("./next-i18next.config.js");
 
 const nextConfig = {
   reactStrictMode: true,
@@ -9,7 +9,7 @@ const nextConfig = {
     if (!isServer) {
       config.resolve.fallback = {
         fs: false,
-        'node:fs': false,
+        "node:fs": false,
         path: false,
       };
     }
