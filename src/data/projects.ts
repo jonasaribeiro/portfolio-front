@@ -30,4 +30,13 @@ export const projectsData: Project[] = [
       { labelKey: "links.live", url: "http://handsplay.com.br" },
     ],
   },
+  {
+    id: "proj-03",
+    titleKey: "projects.p3.title",
+    descriptionKey: "projects.p3.description",
+    image: "/images/projects/p3.png",
+    links: [
+      { labelKey: "links.github", url: "https://github.com/jonasaribeiro/AuthFlowAPI" }
+    ]
+  },
 ];

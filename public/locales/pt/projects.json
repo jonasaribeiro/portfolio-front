@@ -14,6 +14,10 @@
     "p2": {
       "title": "HandsPlay - Backend para Streaming",
       "description": "Fui responsável pela arquitetura e desenvolvimento do backend para uma plataforma de streaming de vídeo, projetando uma API performática e escalável para gerenciar conteúdo e usuários."
+    },
+    "p3": {
+      "title": "AuthFlowAPI - Solução Completa de Autenticação com Node.js",
+      "description": "API RESTful completa para fluxos de login, registro e CRUD de usuários. O projeto implementa features essenciais de segurança, como hashing de senhas com bcrypt e controle de requisições com rate-limits, prevenindo ataques de força bruta. A cobertura de testes automatizados assegura a confiabilidade e a manutenibilidade do código, resultando em uma aplicação performática e segura."
     }
   }
 }
