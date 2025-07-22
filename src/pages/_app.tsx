@@ -6,6 +6,7 @@ import Head from "next/head"; // NOVO: Importe o componente Head
 
 import "../styles/reset.css";
 import "../styles/global.css";
+import { Toaster } from "react-hot-toast";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
@@ -54,6 +55,37 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <link rel="manifest" href="/icons/site.webmanifest" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          duration: 5000,
+          style: {
+            background: "#0f172a",
+            color: "#e2e8f0",
+            border: "1px solid #334155",
+          },
+          success: {
+            style: {
+              background: "#059669",
+              color: "#FFFFFF",
+            },
+            iconTheme: {
+              primary: "#FFFFFF",
+              secondary: "#059669",
+            },
+          },
+          error: {
+            style: {
+              background: "#B91C1C",
+              color: "#FFFFFF",
+            },
+            iconTheme: {
+              primary: "#FFFFFF",
+              secondary: "#B91C1C",
+            },
+          },
+        }}
+      />
       <Component {...pageProps} key={router.locale} />
     </>
   );

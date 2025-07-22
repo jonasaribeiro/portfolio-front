@@ -3,8 +3,7 @@ import { useTranslation } from "next-i18next";
 import { socialLinksData } from "../data/contact";
 import styles from "../styles/components/Contact.module.css";
 import Link from "next/link";
-
-type SubmissionStatus = "success" | "error" | null;
+import toast from "react-hot-toast";
 
 const Contact: React.FC = () => {
   const { t } = useTranslation("contact");
@@ -16,9 +15,6 @@ const Contact: React.FC = () => {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submissionStatus, setSubmissionStatus] =
-    useState<SubmissionStatus>(null);
-
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
@@ -29,7 +25,6 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setSubmissionStatus(null);
 
     try {
       const response = await fetch("/api/contact", {
@@ -46,7 +41,7 @@ const Contact: React.FC = () => {
       });
 
       if (response.ok) {
-        setSubmissionStatus("success");
+        toast.success(t("form.success"));
         setFormData({
           firstName: "",
           lastName: "",
@@ -55,10 +50,10 @@ const Contact: React.FC = () => {
           message: "",
         });
       } else {
-        setSubmissionStatus("error");
+        toast.error(t("form.error"));
       }
     } catch (error) {
-      setSubmissionStatus("error");
+      toast.error(t("form.error"));
     } finally {
       setIsSubmitting(false);
     }
@@ -138,12 +133,6 @@ const Contact: React.FC = () => {
           {isSubmitting ? t("form.submitting") : t("form.submit")}
         </button>
       </form>
-      {submissionStatus === "success" && (
-        <p className={styles.successMessage}>{t("form.success")}</p>
-      )}
-      {submissionStatus === "error" && (
-        <p className={styles.errorMessage}>{t("form.error")}</p>
-      )}
     </section>
   );
 };
