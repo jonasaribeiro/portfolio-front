@@ -4,6 +4,8 @@ import { socialLinksData } from "../data/contact";
 import styles from "../styles/components/Contact.module.css";
 import Link from "next/link";
 
+type SubmissionStatus = "success" | "error" | null;
+
 const Contact: React.FC = () => {
   const { t } = useTranslation("contact");
   const [formData, setFormData] = useState({
@@ -13,6 +15,8 @@ const Contact: React.FC = () => {
     phone: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submissionStatus, setSubmissionStatus] = useState<SubmissionStatus>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -21,10 +25,42 @@ const Contact: React.FC = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Dados do formulário:", formData);
-    alert("Mensagem enviada! (simulação)");
+    setIsSubmitting(true);
+    setSubmissionStatus(null);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmissionStatus("success");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        setSubmissionStatus("error");
+      }
+    } catch (error) {
+      setSubmissionStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -55,6 +91,7 @@ const Contact: React.FC = () => {
             onChange={handleChange}
             placeholder={t("form.firstName")}
             required
+            disabled={isSubmitting}
           />
           <input
             type="text"
@@ -63,6 +100,7 @@ const Contact: React.FC = () => {
             onChange={handleChange}
             placeholder={t("form.lastName")}
             required
+            disabled={isSubmitting}
           />
         </div>
         <input
@@ -72,6 +110,7 @@ const Contact: React.FC = () => {
           onChange={handleChange}
           placeholder={t("form.email")}
           required
+          disabled={isSubmitting}
         />
         <input
           type="tel"
@@ -79,6 +118,7 @@ const Contact: React.FC = () => {
           value={formData.phone}
           onChange={handleChange}
           placeholder={t("form.phone")}
+          disabled={isSubmitting}
         />
         <textarea
           name="message"
@@ -87,11 +127,18 @@ const Contact: React.FC = () => {
           placeholder={t("form.message")}
           rows={7}
           required
+          disabled={isSubmitting}
         ></textarea>
-        <button type="submit" className={styles.contact__submit_button}>
-          {t("form.submit")}
+        <button type="submit" className={styles.contact__submit_button} disabled={isSubmitting}>
+          {isSubmitting ? t("form.submitting") : t("form.submit")}
         </button>
       </form>
+      {submissionStatus === "success" && (
+        <p className={styles.successMessage}>{t("form.success")}</p>
+      )}
+      {submissionStatus === "error" && (
+        <p className={styles.errorMessage}>{t("form.error")}</p>
+      )}
     </section>
   );
 };

@@ -11,6 +11,9 @@
     "email": "Email Address",
     "phone": "Phone Number (Optional)",
     "message": "Message",
-    "submit": "Submit Now"
+    "submit": "Submit Now",
+    "submitting": "Submitting...",
+    "success": "Thank you! Your message has been sent successfully.",
+    "error": "An error occurred. Please try again later."
   }
 }

@@ -11,6 +11,9 @@
     "email": "Endereço de E-mail",
     "phone": "Número de Telefone (Opcional)",
     "message": "Mensagem",
-    "submit": "Enviar Agora"
+    "submit": "Enviar Agora",
+    "submitting": "Enviando...",
+    "success": "Obrigado! Sua mensagem foi enviada com sucesso.",
+    "error": "Ocorreu um erro. Por favor, tente novamente mais tarde."
   }
 }
