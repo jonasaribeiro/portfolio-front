@@ -16,7 +16,8 @@ const Contact: React.FC = () => {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submissionStatus, setSubmissionStatus] = useState<SubmissionStatus>(null);
+  const [submissionStatus, setSubmissionStatus] =
+    useState<SubmissionStatus>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -129,7 +130,11 @@ const Contact: React.FC = () => {
           required
           disabled={isSubmitting}
         ></textarea>
-        <button type="submit" className={styles.contact__submit_button} disabled={isSubmitting}>
+        <button
+          type="submit"
+          className={styles.contact__submit_button}
+          disabled={isSubmitting}
+        >
           {isSubmitting ? t("form.submitting") : t("form.submit")}
         </button>
       </form>
