@@ -1,8 +1,11 @@
+"use client";
+
 import React from "react";
 import { useTranslation } from "next-i18next";
 import styles from "../styles/components/Header.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useLenis } from "lenis/react";
 
 const navLinks = [
   { translationKey: "nav.home", href: "#home" },
@@ -15,6 +18,13 @@ const navLinks = [
 const Header: React.FC = () => {
   const { t } = useTranslation("header");
   const router = useRouter();
+  const lenis = useLenis();
+
+  const handleScrollTo = (target: string) => {
+    if (lenis) {
+      lenis.scrollTo(target, { duration: 1.5 });
+    }
+  };
 
   return (
     <header id="home" className={styles.header}>
@@ -23,9 +33,13 @@ const Header: React.FC = () => {
 
         <nav className={styles.header__nav}>
           {navLinks.map((link) => (
-            <Link href={link.href} key={link.href}>
+            <button
+              key={link.href}
+              className={styles.navLink}
+              onClick={() => handleScrollTo(link.href)}
+            >
               {t(link.translationKey)}
-            </Link>
+            </button>
           ))}
         </nav>
 
@@ -50,8 +64,12 @@ const Header: React.FC = () => {
         </h1>
         <p className={styles.header__subtitle}>{t("hero.subtitle")}</p>
         <div className={styles.header__cta}>
-          <Link href={"#projects"}>{t("hero.cta.viewProjects")}</Link>
-          <Link href={"#contact"}>{t("hero.cta.contactMe")}</Link>
+          <button onClick={() => handleScrollTo("#projects")}>
+            {t("hero.cta.viewProjects")}
+          </button>
+          <button onClick={() => handleScrollTo("#contact")}>
+            {t("hero.cta.contactMe")}
+          </button>
         </div>
       </div>
     </header>

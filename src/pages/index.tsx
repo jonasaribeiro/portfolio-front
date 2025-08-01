@@ -4,6 +4,7 @@ import About from "../components/About";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import type { GetStaticProps } from "next";
@@ -20,6 +21,7 @@ const Home = () => {
         <Contact />
       </main>
       <Footer />
+      <ScrollToTopButton />
     </>
   );
 };
@@ -33,6 +35,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => ({
       "academic",
       "projects",
       "contact",
+      "scrollToTopButton",
     ])),
   },
 });
