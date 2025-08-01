@@ -1,23 +1,21 @@
 import { appWithTranslation, useTranslation } from "next-i18next";
-
 import { useRouter } from "next/router";
-import { useEffect, useRef } from "react";
-
+import { useEffect } from "react";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import { Toaster } from "react-hot-toast";
 
+// Lenis
 import { ReactLenis } from "lenis/react";
-import type { LenisRef } from "lenis/react";
-import { cancelFrame, frame } from "framer-motion";
+import "lenis/dist/lenis.css";
 
+// Estilos Globais
 import "../styles/reset.css";
 import "../styles/global.css";
-import { Toaster } from "react-hot-toast";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
   const { i18n } = useTranslation();
-  const lenisRef = useRef<LenisRef>(null);
 
   useEffect(() => {
     const handleRouteChange = (locale: string) => {
@@ -32,17 +30,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     }
   }, [router.locale, i18n]);
 
-  useEffect(() => {
-    function update(data: { timestamp: number }) {
-      const time = data.timestamp;
-      lenisRef.current?.lenis?.raf(time);
-    }
-
-    frame.update(update, true);
-
-    return () => cancelFrame(update);
-  });
-
   return (
     <>
       <Head>
@@ -51,7 +38,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           name="description"
           content="Portfólio de Jonas Ribeiro, desenvolvedor web."
         />
-
         <link rel="icon" href="/icons/favicon.ico" sizes="any" />
         <link
           rel="icon"
@@ -74,7 +60,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <meta name="theme-color" content="#ffffff" />
       </Head>
 
-      <ReactLenis root options={{ autoRaf: false }} ref={lenisRef}>
+      <ReactLenis root>
         <Toaster
           position="top-right"
           toastOptions={{
