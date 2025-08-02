@@ -9,3 +9,13 @@ header {
 body {
   background-color: rgba(0, 13, 29, 1);
 }
+
+html,
+body {
+  height: auto;
+  overflow-x: hidden;
+}
+
+html {
+  touch-action: pan-y;
+}

@@ -60,7 +60,14 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <meta name="theme-color" content="#ffffff" />
       </Head>
 
-      <ReactLenis root>
+      <ReactLenis
+        root
+        options={{
+          syncTouch: true,
+          syncTouchLerp: 0.1,
+          touchInertiaExponent: 2,
+        }}
+      >
         <Toaster
           position="top-right"
           toastOptions={{
