@@ -32,7 +32,6 @@ export interface TechLogo {
 }
 
 export const techLogosData: TechLogo[] = [
-  // Frontend
   { id: "nextjs", name: "Next.js", icon: SiNextdotjs },
   { id: "react", name: "React", icon: SiReact },
   { id: "html", name: "HTML5", icon: SiHtml5 },

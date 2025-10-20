@@ -3,7 +3,7 @@ import React, { useCallback, useMemo } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 
 import { skillsData, Skill } from "../data/skills";
-import { techLogosData, TechLogo } from "../data/techLogos";
+import { techLogosData } from "../data/techLogos";
 import SkillCard from "./skills/SkillCard";
 import styles from "../styles/components/About.module.css";
 

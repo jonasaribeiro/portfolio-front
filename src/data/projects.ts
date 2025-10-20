@@ -29,7 +29,12 @@ export const projectsData: Project[] = [
     titleKey: "projects.p2.title",
     descriptionKey: "projects.p2.description",
     image: "/images/projects/p2.png",
-    links: [],
+    links: [
+      {
+        labelKey: "links.live",
+        url: "https://handsplay.com.br",
+      },
+    ],
   },
   {
     id: "proj-03",
