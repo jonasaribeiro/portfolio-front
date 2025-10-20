@@ -13,6 +13,7 @@ const Contact: React.FC = () => {
     email: "",
     phone: "",
     message: "",
+    website: "", // Honeypot field
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleChange = (
@@ -37,6 +38,7 @@ const Contact: React.FC = () => {
           email: formData.email,
           phone: formData.phone,
           message: formData.message,
+          website: formData.website,
         }),
       });
 
@@ -48,6 +50,7 @@ const Contact: React.FC = () => {
           email: "",
           phone: "",
           message: "",
+          website: "",
         });
       } else {
         toast.error(t("form.error"));
@@ -80,6 +83,14 @@ const Contact: React.FC = () => {
       </div>
       <form onSubmit={handleSubmit} className={styles.contact__form}>
         <div className={styles.contact__form_row}>
+          {/* Honeypot */}
+          <input
+            type="text"
+            name="website"
+            value={formData.website}
+            style={{ display: "none" }}
+          />
+
           <input
             type="text"
             name="firstName"

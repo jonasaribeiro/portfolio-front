@@ -9,7 +9,11 @@ export default async function handler(
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { name, email, phone, message } = req.body;
+  const { name, email, phone, message, website } = req.body;
+
+  if (website && website.trim() !== "") {
+    return res.status(400).json({ error: "Spam detected" });
+  }
 
   if (!name || !email || !message) {
     return res
@@ -21,7 +25,6 @@ export default async function handler(
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT),
-      // Esta linha agora usa a variável SMTP_SECURE diretamente
       secure: process.env.SMTP_SECURE === "true",
       auth: {
         user: process.env.SMTP_USER,
